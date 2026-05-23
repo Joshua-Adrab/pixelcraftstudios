@@ -1,0 +1,28 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+      ]
+    }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/404.html", "status": 404 }
+  ],
+  "redirects": [
+    { "source": "/web-development", "destination": "/", "permanent": true },
+    { "source": "/web-development/", "destination": "/", "permanent": true },
+    { "source": "/digital-marketing-service", "destination": "/digital-marketing", "permanent": true },
+    { "source": "/digital-marketing-service/", "destination": "/digital-marketing", "permanent": true },
+    { "source": "/seo-service/", "destination": "/seo-service", "permanent": true },
+    { "source": "/mobile-app-development/", "destination": "/mobile-app-development", "permanent": true }
+  ]
+}
