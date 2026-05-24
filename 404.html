@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found | PixelCraftStudios</title>
+<meta name="description" content="The page you're looking for doesn't exist. Return to PixelCraftStudios and explore our small business website design services.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://pixelcraftstudios.online/404">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #0b1628;
+  --navy-mid: #162040;
+  --navy-soft: #1e2d52;
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --gold-pale: #f5e9c8;
+  --cream: #faf8f4;
+  --white: #ffffff;
+  --slate: #4a5578;
+  --slate-light: #8492b4;
+  --border-light: rgba(201,168,76,0.18);
+  --border-navy: rgba(11,22,40,0.1);
+  --r-sm: 8px; --r-md: 14px; --r-lg: 22px; --r-xl: 32px;
+  --shadow-card: 0 4px 32px rgba(11,22,40,0.08);
+  --shadow-gold: 0 8px 32px rgba(201,168,76,0.25);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Outfit',sans-serif;background:var(--navy);color:var(--white);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+.display,h1,h2,h3,h4{font-family:'Playfair Display',serif}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 6%;height:72px;background:rgba(11,22,40,0.92);backdrop-filter:blur(16px) saturate(180%);border-bottom:1px solid rgba(201,168,76,0.12)}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center}
+.logo-mark svg{width:20px;height:20px}
+.logo-text{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:rgba(255,255,255,0.85);letter-spacing:-0.01em}
+.logo-text span{color:var(--gold)}
+.nav-links{display:flex;align-items:center;gap:2.5rem;list-style:none}
+.nav-links a{font-size:.875rem;font-weight:500;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s;letter-spacing:.01em}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--gold)!important;color:var(--navy)!important;padding:.55rem 1.4rem;border-radius:100px;font-size:.85rem!important;font-weight:600!important;transition:background .2s,transform .15s,box-shadow .2s!important;letter-spacing:.02em}
+.nav-cta:hover{background:var(--gold-light)!important;transform:translateY(-1px);box-shadow:var(--shadow-gold)!important}
+
+/* NAV HAMBURGER */
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5.5px;width:42px;height:42px;background:none;border:1.5px solid rgba(201,168,76,.25);border-radius:10px;cursor:pointer;padding:0;transition:border-color .2s,background .2s;flex-shrink:0}
+.nav-hamburger:hover{border-color:var(--gold);background:rgba(201,168,76,.06)}
+.nav-hamburger span{display:block;width:18px;height:2px;background:rgba(255,255,255,.7);border-radius:2px;transition:transform .3s,opacity .2s,width .3s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0;width:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+.mobile-nav{position:fixed;top:72px;left:0;right:0;z-index:199;background:rgba(11,22,40,0.97);backdrop-filter:blur(20px) saturate(180%);border-bottom:2px solid rgba(201,168,76,.2);max-height:0;overflow:hidden;transition:max-height .38s ease;display:none}
+.mobile-nav.open{max-height:500px}
+.mobile-nav ul{list-style:none;padding:.5rem 6% 0}
+.mobile-nav li{border-bottom:1px solid rgba(201,168,76,.1)}
+.mobile-nav li:last-child{border-bottom:none}
+.mobile-nav a{display:block;padding:.9rem 0;font-size:.95rem;font-weight:500;color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s}
+.mobile-nav a:hover{color:var(--white);font-weight:600}
+.mob-cta-link{display:block;background:var(--gold);color:var(--navy)!important;text-align:center;margin:1rem 6% 1.25rem;padding:.85rem;border-radius:100px;font-weight:600;font-size:.9rem;text-decoration:none;transition:background .2s,color .2s}
+.mob-cta-link:hover{background:var(--gold-light)!important}
+
+/* 404 MAIN */
+main{flex:1;display:flex;align-items:center;justify-content:center;padding:9rem 6% 6rem;position:relative;overflow:hidden;text-align:center}
+.bg-circle{position:absolute;border-radius:50%;pointer-events:none}
+.bg-circle.c1{width:700px;height:700px;top:-200px;right:-150px;background:radial-gradient(circle,rgba(201,168,76,.1) 0%,transparent 70%)}
+.bg-circle.c2{width:500px;height:500px;bottom:-150px;left:-100px;background:radial-gradient(circle,rgba(201,168,76,.06) 0%,transparent 70%)}
+.bg-grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(201,168,76,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.03) 1px,transparent 1px);background-size:72px 72px}
+
+.error-inner{position:relative;z-index:2;max-width:600px}
+.error-code{font-family:'Playfair Display',serif;font-size:clamp(7rem,18vw,12rem);font-weight:800;line-height:1;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:2px rgba(201,168,76,.35);background:linear-gradient(135deg,rgba(201,168,76,.15) 0%,transparent 60%);-webkit-background-clip:text;background-clip:text;animation:fadeIn .8s ease forwards}
+@keyframes fadeIn{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
+.error-eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:1.5rem;animation:slideUp .7s ease .2s both}
+.eyebrow-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);animation:breathe 2s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.4);opacity:.6}}
+.eyebrow-text{font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.error-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;letter-spacing:-.025em;line-height:1.15;color:var(--white);margin-bottom:1.25rem;animation:slideUp .7s ease .3s both}
+.error-desc{font-size:1rem;font-weight:300;line-height:1.8;color:rgba(255,255,255,.5);max-width:460px;margin:0 auto 2.5rem;animation:slideUp .7s ease .4s both}
+.error-actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-bottom:3.5rem;animation:slideUp .7s ease .5s both}
+.btn-gold{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--navy);padding:.9rem 2rem;border-radius:100px;font-size:.9rem;font-weight:600;text-decoration:none;letter-spacing:.02em;transition:background .2s,transform .15s,box-shadow .2s;box-shadow:var(--shadow-gold)}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 12px 40px rgba(201,168,76,.35)}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;border:1.5px solid rgba(255,255,255,.2);color:rgba(255,255,255,.75);padding:.9rem 2rem;border-radius:100px;font-size:.9rem;font-weight:500;text-decoration:none;transition:border-color .2s,color .2s,background .2s}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);background:rgba(201,168,76,.06)}
+
+/* QUICK LINKS */
+.quick-links{animation:slideUp .7s ease .6s both}
+.quick-label{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:1rem}
+.quick-grid{display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center}
+.quick-link{display:inline-flex;align-items:center;gap:6px;padding:.45rem 1rem;border:1px solid rgba(201,168,76,.15);border-radius:100px;font-size:.82rem;font-weight:500;color:rgba(255,255,255,.5);text-decoration:none;transition:border-color .2s,color .2s,background .2s}
+.quick-link:hover{border-color:rgba(201,168,76,.4);color:var(--gold-light);background:rgba(201,168,76,.05)}
+
+/* FOOTER */
+footer{background:var(--navy-mid);padding:2.5rem 6%;border-top:1px solid rgba(201,168,76,.1)}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:.78rem;color:rgba(255,255,255,.25)}
+.foot-bottom span:last-child{color:rgba(201,168,76,.4)}
+
+@keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+@media(max-width:900px){
+  .nav-links{display:none}
+  .nav-hamburger{display:flex}
+  .mobile-nav{display:block}
+}
+@media(max-width:600px){
+  nav{padding:0 5%}
+  main{padding:8rem 5% 4rem}
+  footer{padding:2rem 5%}
+  .error-actions{flex-direction:column;align-items:center}
+  .btn-gold,.btn-ghost{width:100%;max-width:280px;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav aria-label="Main navigation">
+  <a href="/" class="nav-logo" aria-label="PixelCraftStudios home">
+    <div class="logo-mark" aria-hidden="true">
+      <svg viewBox="0 0 20 20" fill="none"><path d="M3 10L10 3L17 10L17 17L3 17Z" stroke="#c9a84c" stroke-width="1.5" fill="none"/><circle cx="10" cy="12" r="2.5" fill="#c9a84c"/></svg>
+    </div>
+    <span class="logo-text">PixelCraft<span>Studios</span></span>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="/">Web Design</a></li>
+    <li><a href="/seo-service">SEO Service</a></li>
+    <li><a href="/digital-marketing">Digital Marketing</a></li>
+    <li><a href="/mobile-app-development">Mobile Apps</a></li>
+    <li><a href="/#pricing">Pricing</a></li>
+    <li><a href="/contact" class="nav-cta">Free Consultation</a></li>
+  </ul>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mobile-nav" class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+  <ul>
+    <li><a href="/">Web Design</a></li>
+    <li><a href="/seo-service">SEO Service</a></li>
+    <li><a href="/digital-marketing">Digital Marketing</a></li>
+    <li><a href="/mobile-app-development">Mobile Apps</a></li>
+    <li><a href="/#pricing">Pricing</a></li>
+  </ul>
+  <a href="/contact" class="mob-cta-link">Free Consultation</a>
+</div>
+
+<!-- MAIN -->
+<main>
+  <div class="bg-circle c1" aria-hidden="true"></div>
+  <div class="bg-circle c2" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <div class="error-inner">
+    <div class="error-code" aria-hidden="true">404</div>
+    <div class="error-eyebrow">
+      <div class="eyebrow-dot" aria-hidden="true"></div>
+      <span class="eyebrow-text">Page not found</span>
+    </div>
+    <h1 class="error-title">This page doesn't exist</h1>
+    <p class="error-desc">The page you're looking for may have been moved, renamed, or never existed. Let's get you back on track.</p>
+    <div class="error-actions">
+      <a href="/" class="btn-gold">
+        Back to Home
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="/contact" class="btn-ghost">Get in Touch</a>
+    </div>
+    <div class="quick-links">
+      <div class="quick-label">Or browse our services</div>
+      <div class="quick-grid">
+        <a href="/" class="quick-link">Website Design</a>
+        <a href="/seo-service" class="quick-link">SEO Service</a>
+        <a href="/digital-marketing" class="quick-link">Digital Marketing</a>
+        <a href="/mobile-app-development" class="quick-link">Mobile Apps</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-bottom">
+    <span>© 2025 PixelCraftStudios. All rights reserved.</span>
+    <span>Small Business Website Design · SEO Optimized · Fast Delivery</span>
+  </div>
+</footer>
+
+<script>
+const ham=document.getElementById('nav-hamburger'),mnav=document.getElementById('mobile-nav');if(ham&&mnav){ham.addEventListener('click',()=>{const o=ham.classList.toggle('open');mnav.classList.toggle('open');ham.setAttribute('aria-expanded',String(o))});mnav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ham.classList.remove('open');mnav.classList.remove('open');ham.setAttribute('aria-expanded','false')}))}
+</script>
+</body>
+</html>
