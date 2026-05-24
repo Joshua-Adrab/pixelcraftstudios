@@ -568,27 +568,51 @@ footer li a:hover{color:var(--gold)}
   </div>
   <div class="test-grid">
     <article class="test-card reveal" itemscope itemtype="https://schema.org/Review">
-      <div class="test-stars">★★★★★</div>
+      <span itemprop="itemReviewed" itemscope itemtype="https://schema.org/LocalBusiness"><meta itemprop="name" content="PixelCraftStudios"></span>
+      <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+        <meta itemprop="ratingValue" content="5">
+        <meta itemprop="bestRating" content="5">
+        <div class="test-stars" aria-label="5 out of 5 stars">★★★★★</div>
+      </div>
       <blockquote class="test-quote" itemprop="reviewBody">"Our booking app reduced no-shows by 60% thanks to automated reminders. Customers love how easy it is to book and we save hours every week on manual scheduling."</blockquote>
       <div class="test-footer">
         <div class="test-av" style="background:var(--gold)" aria-hidden="true">PL</div>
-        <div><div class="test-name" itemprop="author">Priya Lim</div><div class="test-role">Wellness Studio Owner</div></div>
+        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+          <div class="test-name" itemprop="name">Priya Lim</div>
+          <div class="test-role">Wellness Studio Owner</div>
+        </div>
       </div>
     </article>
     <article class="test-card reveal" itemscope itemtype="https://schema.org/Review">
-      <div class="test-stars">★★★★★</div>
+      <span itemprop="itemReviewed" itemscope itemtype="https://schema.org/LocalBusiness"><meta itemprop="name" content="PixelCraftStudios"></span>
+      <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+        <meta itemprop="ratingValue" content="5">
+        <meta itemprop="bestRating" content="5">
+        <div class="test-stars" aria-label="5 out of 5 stars">★★★★★</div>
+      </div>
       <blockquote class="test-quote" itemprop="reviewBody">"Our loyalty app brought back customers who hadn't visited in months. Within 6 weeks of launch, 40% of our app users had redeemed a reward and made a purchase."</blockquote>
       <div class="test-footer">
         <div class="test-av" style="background:var(--navy-soft)" aria-hidden="true">MK</div>
-        <div><div class="test-name" itemprop="author">Marcus King</div><div class="test-role">Café Chain Owner</div></div>
+        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+          <div class="test-name" itemprop="name">Marcus King</div>
+          <div class="test-role">Café Chain Owner</div>
+        </div>
       </div>
     </article>
     <article class="test-card reveal" itemscope itemtype="https://schema.org/Review">
-      <div class="test-stars">★★★★★</div>
+      <span itemprop="itemReviewed" itemscope itemtype="https://schema.org/LocalBusiness"><meta itemprop="name" content="PixelCraftStudios"></span>
+      <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+        <meta itemprop="ratingValue" content="5">
+        <meta itemprop="bestRating" content="5">
+        <div class="test-stars" aria-label="5 out of 5 stars">★★★★★</div>
+      </div>
       <blockquote class="test-quote" itemprop="reviewBody">"The client portal app made our consultancy look like a major firm. Clients can access their reports, send messages, and sign documents — all from the app. It's been a game changer."</blockquote>
       <div class="test-footer">
         <div class="test-av" style="background:#4a7c59" aria-hidden="true">SN</div>
-        <div><div class="test-name" itemprop="author">Sarah Nguyen</div><div class="test-role">Consulting Firm Owner</div></div>
+        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+          <div class="test-name" itemprop="name">Sarah Nguyen</div>
+          <div class="test-role">Consulting Firm Owner</div>
+        </div>
       </div>
     </article>
   </div>
@@ -600,41 +624,41 @@ footer li a:hover{color:var(--gold)}
     <h2 class="section-heading reveal" id="faq-heading">Mobile App Development<br>Questions Answered</h2>
     <div class="divider reveal"></div>
   </div>
-  <div class="faq-inner" itemscope itemtype="https://schema.org/FAQPage">
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <div class="faq-inner">
+    <div class="faq-item">
       <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
-        <h3 itemprop="name">How much does it cost to develop a mobile app for a small business?</h3>
+        <h3>How much does it cost to develop a mobile app for a small business?</h3>
         <div class="faq-toggle" aria-hidden="true">+</div>
       </div>
-      <div class="faq-a" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-        <p itemprop="text">Our small business mobile app packages start at $999 for a Starter App (up to 5 screens, iOS and Android) and $2,499 for a Business App with user accounts, booking or payment integration, and an admin dashboard. Enterprise apps with complex features are priced custom based on scope.</p>
+      <div class="faq-a">
+        <p>Our small business mobile app packages start at $999 for a Starter App (up to 5 screens, iOS and Android) and $2,499 for a Business App with user accounts, booking or payment integration, and an admin dashboard. Enterprise apps with complex features are priced custom based on scope.</p>
       </div>
     </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+    <div class="faq-item">
       <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
-        <h3 itemprop="name">How long does it take to build a mobile app for a small business?</h3>
+        <h3>How long does it take to build a mobile app for a small business?</h3>
         <div class="faq-toggle" aria-hidden="true">+</div>
       </div>
-      <div class="faq-a" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-        <p itemprop="text">Starter apps typically take 4–6 weeks from design to App Store submission. Business apps take 6–10 weeks. Enterprise apps with complex integrations can take 3–6 months. We provide a clear timeline before starting your project.</p>
+      <div class="faq-a">
+        <p>Starter apps typically take 4–6 weeks from design to App Store submission. Business apps take 6–10 weeks. Enterprise apps with complex integrations can take 3–6 months. We provide a clear timeline before starting your project.</p>
       </div>
     </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+    <div class="faq-item">
       <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
-        <h3 itemprop="name">Do you build for both iPhone (iOS) and Android?</h3>
+        <h3>Do you build for both iPhone (iOS) and Android?</h3>
         <div class="faq-toggle" aria-hidden="true">+</div>
       </div>
-      <div class="faq-a" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-        <p itemprop="text">Yes — every app package includes both iOS (iPhone and iPad) and Android development at the same price. We use cross-platform development to build both efficiently, so your small business reaches all customers regardless of their device.</p>
+      <div class="faq-a">
+        <p>Yes — every app package includes both iOS (iPhone and iPad) and Android development at the same price. We use cross-platform development to build both efficiently, so your small business reaches all customers regardless of their device.</p>
       </div>
     </div>
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+    <div class="faq-item">
       <div class="faq-q" role="button" tabindex="0" aria-expanded="false">
-        <h3 itemprop="name">Do I need a mobile app if I already have a website?</h3>
+        <h3>Do I need a mobile app if I already have a website?</h3>
         <div class="faq-toggle" aria-hidden="true">+</div>
       </div>
-      <div class="faq-a" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-        <p itemprop="text">A website and a mobile app serve different purposes. Your website handles discoverability and first impressions. A mobile app provides a direct, ongoing relationship with existing customers — with push notifications, offline access, faster performance, and a home screen presence that keeps your small business top of mind daily.</p>
+      <div class="faq-a">
+        <p>A website and a mobile app serve different purposes. Your website handles discoverability and first impressions. A mobile app provides a direct, ongoing relationship with existing customers — with push notifications, offline access, faster performance, and a home screen presence that keeps your small business top of mind daily.</p>
       </div>
     </div>
   </div>
@@ -688,7 +712,69 @@ footer li a:hover{color:var(--gold)}
 </footer>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://pixelcraftstudios.com/mobile-app-development","url":"https://pixelcraftstudios.com/mobile-app-development","name":"Mobile App Development for Small Business | iOS & Android | PixelCraftStudios","description":"Custom iOS and Android mobile app development for small businesses. Booking apps, client portals, loyalty programs. Packages from $999.","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://pixelcraftstudios.com/"},{"@type":"ListItem","position":2,"name":"Mobile App Development","item":"https://pixelcraftstudios.com/mobile-app-development"}]},"isPartOf":{"@id":"https://pixelcraftstudios.com/#website"}},{"@type":"ProfessionalService","@id":"https://pixelcraftstudios.com/mobile-app-development#service","name":"PixelCraftStudios Mobile App Development","url":"https://pixelcraftstudios.com/mobile-app-development","description":"Custom iOS and Android mobile app development for small businesses. Booking apps, client portals, loyalty programs. Packages from $999.","priceRange":"$999–$2,499+","serviceType":"Mobile App Development for Small Business","areaServed":"Worldwide","provider":{"@id":"https://pixelcraftstudios.com/#organization"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Small Business App Packages","itemListElement":[{"@type":"Offer","name":"Starter App","price":"999","priceCurrency":"USD"},{"@type":"Offer","name":"Business App","price":"2499","priceCurrency":"USD"}]}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does it cost to develop a mobile app for a small business?","acceptedAnswer":{"@type":"Answer","text":"Our packages start at $999 for a Starter App (iOS and Android, up to 5 screens) and $2,499 for a Business App with user accounts and payment integration."}},{"@type":"Question","name":"How long does it take to build a mobile app for a small business?","acceptedAnswer":{"@type":"Answer","text":"Starter apps take 4–6 weeks, Business apps take 6–10 weeks, and Enterprise apps take 3–6 months from design to App Store submission."}},{"@type":"Question","name":"Do you build for both iOS and Android?","acceptedAnswer":{"@type":"Answer","text":"Yes — every package includes both iOS and Android development at the same price using cross-platform development."}},{"@type":"Question","name":"Do I need a mobile app if I already have a website?","acceptedAnswer":{"@type":"Answer","text":"A website and a mobile app serve different purposes. Your website handles discoverability and first impressions. A mobile app provides a direct, ongoing relationship with existing customers — with push notifications, offline access, faster performance, and a home screen presence that keeps your business top of mind daily."}}]}]}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://pixelcraftstudios.online/#organization",
+      "name": "PixelCraftStudios",
+      "url": "https://pixelcraftstudios.online/",
+      "description": "Custom iOS and Android mobile app development for small businesses. Booking apps, client portals, loyalty programs. Packages from $999.",
+      "priceRange": "$999–$2,499+",
+      "serviceType": "Mobile App Development for Small Business",
+      "areaServed": "Worldwide",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Small Business App Packages",
+        "itemListElement": [
+          {"@type": "Offer", "name": "Starter App", "price": "999", "priceCurrency": "USD"},
+          {"@type": "Offer", "name": "Business App", "price": "2499", "priceCurrency": "USD"}
+        ]
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://pixelcraftstudios.online/mobile-app-development",
+      "url": "https://pixelcraftstudios.online/mobile-app-development",
+      "name": "Mobile App Development for Small Business | iOS & Android | PixelCraftStudios",
+      "description": "Custom iOS and Android mobile app development for small businesses. Booking apps, client portals, loyalty programs. Packages from $999.",
+      "isPartOf": {"@id": "https://pixelcraftstudios.online/#organization"},
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pixelcraftstudios.online/"},
+          {"@type": "ListItem", "position": 2, "name": "Mobile App Development", "item": "https://pixelcraftstudios.online/mobile-app-development"}
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does it cost to develop a mobile app for a small business?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Our small business mobile app packages start at $999 for a Starter App (up to 5 screens, iOS and Android) and $2,499 for a Business App with user accounts, booking or payment integration, and an admin dashboard. Enterprise apps with complex features are priced custom based on scope."}
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to build a mobile app for a small business?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Starter apps typically take 4–6 weeks from design to App Store submission. Business apps take 6–10 weeks. Enterprise apps with complex integrations can take 3–6 months. We provide a clear timeline before starting your project."}
+        },
+        {
+          "@type": "Question",
+          "name": "Do you build for both iPhone (iOS) and Android?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes — every app package includes both iOS (iPhone and iPad) and Android development at the same price. We use cross-platform development to build both efficiently, so your small business reaches all customers regardless of their device."}
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a mobile app if I already have a website?",
+          "acceptedAnswer": {"@type": "Answer", "text": "A website and a mobile app serve different purposes. Your website handles discoverability and first impressions. A mobile app provides a direct, ongoing relationship with existing customers — with push notifications, offline access, faster performance, and a home screen presence that keeps your small business top of mind daily."}
+        }
+      ]
+    }
+  ]
+}
 </script>
 <script>
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const s=Array.from(e.target.parentElement.querySelectorAll(".reveal")),i=s.indexOf(e.target);setTimeout(()=>e.target.classList.add("in"),i*80);obs.unobserve(e.target)}})},{threshold:0.1});
