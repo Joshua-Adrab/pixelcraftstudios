@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About PixelCraftStudios | Small Business Web Design Agency</title>
+<meta name="description" content="Learn about PixelCraftStudios — the small business web design agency dedicated to helping entrepreneurs and local businesses grow online with affordable, professional digital solutions.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="PixelCraftStudios">
+<meta name="theme-color" content="#0b1628">
+<link rel="canonical" href="https://pixelcraftstudios.online/about">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pixelcraftstudios.online/about">
+<meta property="og:title" content="About PixelCraftStudios | Small Business Web Design Agency">
+<meta property="og:description" content="We help small businesses compete online with professional website design, SEO, digital marketing, and mobile apps — at prices that make sense.">
+<meta property="og:image" content="https://pixelcraftstudios.online/og-image.png">
+<meta property="og:site_name" content="PixelCraftStudios">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About PixelCraftStudios">
+<meta name="twitter:description" content="The small business web design agency helping entrepreneurs grow online with affordable, professional digital solutions.">
+<meta name="twitter:image" content="https://pixelcraftstudios.online/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{--navy:#0b1628;--navy-mid:#162040;--navy-soft:#1e2d52;--gold:#c9a84c;--gold-light:#e8c97a;--cream:#faf8f4;--white:#ffffff;--slate:#4a5578;--slate-light:#8492b4;--border-navy:rgba(11,22,40,0.1);--r-md:14px;--r-lg:22px;--r-xl:32px;--shadow-card:0 4px 32px rgba(11,22,40,0.08);--shadow-gold:0 8px 32px rgba(201,168,76,0.25)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Outfit',sans-serif;background:var(--cream);color:var(--navy);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Playfair Display',serif}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 6%;height:72px;background:rgba(250,248,244,0.92);backdrop-filter:blur(16px) saturate(180%);border-bottom:1px solid var(--border-navy)}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:38px;height:38px;border-radius:10px;background:var(--navy);display:flex;align-items:center;justify-content:center}
+.logo-mark svg{width:20px;height:20px}
+.logo-text{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--navy);letter-spacing:-0.01em}
+.logo-text span{color:var(--gold)}
+.nav-links{display:flex;align-items:center;gap:2.5rem;list-style:none}
+.nav-links a{font-size:.875rem;font-weight:500;color:var(--slate);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--navy)}
+.nav-cta{background:var(--navy)!important;color:var(--white)!important;padding:.55rem 1.4rem;border-radius:100px;font-size:.85rem!important;font-weight:600!important;transition:background .2s,transform .15s!important}
+.nav-cta:hover{background:var(--gold)!important;color:var(--navy)!important;transform:translateY(-1px)}
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5.5px;width:42px;height:42px;background:none;border:1.5px solid var(--border-navy);border-radius:10px;cursor:pointer;padding:0}
+.nav-hamburger span{display:block;width:18px;height:2px;background:var(--navy);border-radius:2px;transition:transform .3s,opacity .2s,width .3s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0;width:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+.mobile-nav{position:fixed;top:72px;left:0;right:0;z-index:199;background:rgba(250,248,244,0.97);backdrop-filter:blur(20px) saturate(180%);border-bottom:2px solid rgba(201,168,76,.2);max-height:0;overflow:hidden;transition:max-height .38s ease;display:none}
+.mobile-nav.open{max-height:500px}
+.mobile-nav ul{list-style:none;padding:.5rem 6% 0}
+.mobile-nav li{border-bottom:1px solid var(--border-navy)}
+.mobile-nav li:last-child{border-bottom:none}
+.mobile-nav a{display:block;padding:.9rem 0;font-size:.95rem;font-weight:500;color:var(--slate);text-decoration:none;transition:color .2s}
+.mobile-nav a:hover,.mobile-nav a.mob-active{color:var(--navy);font-weight:600}
+.mob-cta-link{display:block;background:var(--navy);color:var(--white)!important;text-align:center;margin:1rem 6% 1.25rem;padding:.85rem;border-radius:100px;font-weight:600;font-size:.9rem;text-decoration:none;transition:background .2s,color .2s}
+.mob-cta-link:hover{background:var(--gold)!important;color:var(--navy)!important}
+
+/* HERO */
+.hero{min-height:52vh;background:var(--navy);display:flex;align-items:center;padding:9rem 6% 5rem;position:relative;overflow:hidden}
+.hero-bg-circle{position:absolute;border-radius:50%;pointer-events:none}
+.hero-bg-circle.c1{width:600px;height:600px;top:-180px;right:-120px;background:radial-gradient(circle,rgba(201,168,76,.12) 0%,transparent 70%)}
+.hero-bg-circle.c2{width:400px;height:400px;bottom:-100px;left:-80px;background:radial-gradient(circle,rgba(201,168,76,.07) 0%,transparent 70%)}
+.hero-bg-lines{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.hero-bg-lines::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.04) 1px,transparent 1px);background-size:72px 72px}
+.hero-inner{position:relative;z-index:2;max-width:680px}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:1.75rem;opacity:0;animation:slideUp .7s ease .1s forwards}
+.eyebrow-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);animation:breathe 2s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.4);opacity:.6}}
+.eyebrow-text{font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.hero h1{font-size:clamp(2.4rem,5vw,4rem);font-weight:800;line-height:1.08;letter-spacing:-.02em;color:var(--white);margin-bottom:1.25rem;opacity:0;animation:slideUp .7s ease .2s forwards}
+.hero h1 .accent{color:var(--gold-light);font-style:italic}
+.hero-desc{font-size:1.05rem;font-weight:300;line-height:1.8;color:rgba(255,255,255,.65);max-width:520px;opacity:0;animation:slideUp .7s ease .3s forwards}
+
+/* SECTIONS */
+.section{padding:6rem 6%}
+.section-center{text-align:center}
+.tag-line{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.85rem}
+.section-heading{font-size:clamp(1.9rem,3.5vw,2.75rem);font-weight:700;letter-spacing:-.025em;line-height:1.15;color:var(--navy);margin-bottom:1rem}
+.section-sub{font-size:1rem;color:var(--slate);font-weight:300;line-height:1.8;max-width:580px}
+.section-center .section-sub{margin:0 auto}
+.divider{width:48px;height:3px;border-radius:2px;background:var(--gold);margin:1.25rem 0 0}
+.section-center .divider{margin:1.25rem auto 0}
+
+/* STORY */
+.story-bg{background:var(--white)}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;margin-top:4rem}
+.story-text p{font-size:.96rem;color:var(--slate);line-height:1.85;margin-bottom:1.25rem}
+.story-text p:last-child{margin-bottom:0}
+.story-text strong{color:var(--navy);font-weight:600}
+.story-visual{position:relative}
+.story-card{background:var(--navy);border-radius:var(--r-xl);padding:2.5rem;color:var(--white)}
+.story-card-eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
+.story-stat-row{display:flex;gap:0;border:1px solid rgba(201,168,76,.15);border-radius:var(--r-lg);overflow:hidden;margin-bottom:1.5rem}
+.story-stat{flex:1;padding:1.25rem 1rem;text-align:center;border-right:1px solid rgba(201,168,76,.15)}
+.story-stat:last-child{border-right:none}
+.story-stat-val{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:700;color:var(--gold-light);line-height:1}
+.story-stat-lbl{font-size:.7rem;color:rgba(255,255,255,.45);margin-top:.3rem}
+.story-card-quote{font-size:.92rem;color:rgba(255,255,255,.6);line-height:1.75;font-style:italic;border-left:2px solid var(--gold);padding-left:1rem}
+
+/* VALUES */
+.values-bg{background:var(--cream)}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem}
+.value-card{background:var(--white);border:1px solid var(--border-navy);border-radius:var(--r-lg);padding:2rem;transition:transform .25s,box-shadow .25s,border-color .25s}
+.value-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-card);border-color:rgba(201,168,76,.3)}
+.value-icon{font-size:1.75rem;margin-bottom:1rem;display:block}
+.value-card h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.55rem;font-family:'Playfair Display',serif}
+.value-card p{font-size:.875rem;color:var(--slate);line-height:1.7}
+
+/* MISSION STRIP */
+.mission-strip{background:var(--navy);padding:5rem 6%;text-align:center;position:relative;overflow:hidden}
+.mission-strip::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(201,168,76,.12) 0%,transparent 65%);pointer-events:none}
+.mission-strip blockquote{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,3vw,2.2rem);font-weight:700;color:var(--white);line-height:1.4;max-width:800px;margin:0 auto;position:relative;letter-spacing:-.02em}
+.mission-strip blockquote em{color:var(--gold-light);font-style:italic}
+.mission-strip cite{display:block;font-size:.82rem;font-family:'Outfit',sans-serif;font-style:normal;color:rgba(255,255,255,.4);margin-top:1.5rem;font-weight:400}
+
+/* WHY US */
+.whyus-bg{background:var(--white)}
+.whyus-list{display:flex;flex-direction:column;gap:1rem;margin-top:3rem;max-width:680px}
+.whyus-item{display:flex;gap:1.25rem;align-items:flex-start;padding:1.5rem;background:var(--cream);border:1px solid var(--border-navy);border-radius:var(--r-md);transition:border-color .2s,transform .2s}
+.whyus-item:hover{border-color:rgba(201,168,76,.3);transform:translateX(5px)}
+.whyus-check{width:36px;height:36px;border-radius:10px;background:var(--navy);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--gold);font-weight:700;font-size:.9rem}
+.whyus-item h4{font-size:.95rem;font-weight:600;color:var(--navy);margin-bottom:.3rem;font-family:'Outfit',sans-serif}
+.whyus-item p{font-size:.85rem;color:var(--slate);line-height:1.65}
+
+/* CTA */
+.cta-wrap{padding:0 6% 6rem}
+.cta-inner{background:var(--navy);border-radius:var(--r-xl);padding:5rem 3rem;text-align:center;position:relative;overflow:hidden}
+.cta-inner::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:500px;height:500px;background:radial-gradient(circle,rgba(201,168,76,.15) 0%,transparent 65%);pointer-events:none}
+.cta-inner h2{font-size:clamp(2rem,4vw,3rem);font-weight:800;color:var(--white);letter-spacing:-.03em;margin-bottom:1rem;position:relative}
+.cta-inner h2 em{color:var(--gold-light);font-style:italic}
+.cta-inner p{color:rgba(255,255,255,.55);font-size:1rem;margin-bottom:2.5rem;position:relative}
+.btn-gold{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--navy);padding:.9rem 2rem;border-radius:100px;font-size:.9rem;font-weight:600;text-decoration:none;letter-spacing:.02em;transition:background .2s,transform .15s,box-shadow .2s;box-shadow:var(--shadow-gold)}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 12px 40px rgba(201,168,76,.35)}
+
+/* FOOTER */
+footer{background:var(--navy-mid);padding:4rem 6% 2rem;border-top:1px solid rgba(201,168,76,.1)}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:4rem;margin-bottom:3rem}
+.foot-brand-desc{font-size:.85rem;color:rgba(255,255,255,.4);margin-top:.85rem;line-height:1.8;max-width:260px}
+footer h4{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.1rem}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:.65rem}
+footer li a{font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s}
+footer li a:hover{color:var(--gold)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:.78rem;color:rgba(255,255,255,.25)}
+.foot-bottom span:last-child{color:rgba(201,168,76,.4)}
+
+/* ANIMATIONS */
+@keyframes slideUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .story-grid{grid-template-columns:1fr;gap:3rem}
+  .values-grid{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1fr;gap:2.5rem}
+  .nav-links{display:none}
+  .nav-hamburger{display:flex}
+  .mobile-nav{display:block}
+}
+@media(max-width:600px){
+  .hero{padding:8rem 5% 4rem}
+  nav{padding:0 5%}
+  .section{padding:4.5rem 5%}
+  .cta-wrap{padding:0 5% 4.5rem}
+  .cta-inner{padding:3.5rem 1.5rem}
+  .values-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav aria-label="Main navigation">
+  <a href="/" class="nav-logo" aria-label="PixelCraftStudios home">
+    <div class="logo-mark" aria-hidden="true">
+      <svg viewBox="0 0 20 20" fill="none"><path d="M3 10L10 3L17 10L17 17L3 17Z" stroke="#c9a84c" stroke-width="1.5" fill="none"/><circle cx="10" cy="12" r="2.5" fill="#c9a84c"/></svg>
+    </div>
+    <span class="logo-text">PixelCraft<span>Studios</span></span>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="/">Web Design</a></li>
+    <li><a href="/seo-service">SEO Service</a></li>
+    <li><a href="/digital-marketing">Digital Marketing</a></li>
+    <li><a href="/mobile-app-development">Mobile Apps</a></li>
+    <li><a href="/contact" class="nav-cta">Free Consultation</a></li>
+  </ul>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mobile-nav" class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+  <ul>
+    <li><a href="/">Web Design</a></li>
+    <li><a href="/seo-service">SEO Service</a></li>
+    <li><a href="/digital-marketing">Digital Marketing</a></li>
+    <li><a href="/mobile-app-development">Mobile Apps</a></li>
+  </ul>
+  <a href="/contact" class="mob-cta-link">Free Consultation</a>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg-circle c1" aria-hidden="true"></div>
+  <div class="hero-bg-circle c2" aria-hidden="true"></div>
+  <div class="hero-bg-lines" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <div class="eyebrow-dot" aria-hidden="true"></div>
+      <span class="eyebrow-text">Our Story</span>
+    </div>
+    <h1>Built to Help <span class="accent">Small Businesses</span> Win Online</h1>
+    <p class="hero-desc">We're a passionate team of designers, developers, and marketers who believe every small business deserves a powerful online presence — not just the big ones.</p>
+  </div>
+</header>
+
+<!-- STORY -->
+<section class="section story-bg">
+  <div class="story-grid">
+    <div class="story-text reveal">
+      <p class="tag-line">Our Story</p>
+      <h2 class="section-heading">We Started Because Small Businesses Deserved Better</h2>
+      <div class="divider" style="margin-bottom:2rem"></div>
+      <p>PixelCraftStudios was founded with one clear mission: give small business owners access to the same quality of web design, SEO, and digital marketing that big corporations pay tens of thousands of dollars for — at prices that actually make sense.</p>
+      <p>We saw too many great local businesses losing customers to competitors simply because their online presence didn't reflect the quality of their work. A bad website, no Google ranking, no social strategy — not because they didn't care, but because <strong>the options were either too expensive or too complicated.</strong></p>
+      <p>So we built PixelCraftStudios to bridge that gap. Fast delivery, transparent pricing, unlimited revisions, and a team that genuinely cares about your results — not just your invoice.</p>
+    </div>
+    <div class="story-visual reveal">
+      <div class="story-card">
+        <div class="story-card-eyebrow">By the numbers</div>
+        <div class="story-stat-row">
+          <div class="story-stat">
+            <div class="story-stat-val">100+</div>
+            <div class="story-stat-lbl">Happy Clients</div>
+          </div>
+          <div class="story-stat">
+            <div class="story-stat-val">50+</div>
+            <div class="story-stat-lbl">Apps Launched</div>
+          </div>
+          <div class="story-stat">
+            <div class="story-stat-val">98%</div>
+            <div class="story-stat-lbl">Satisfaction Rate</div>
+          </div>
+        </div>
+        <p class="story-card-quote">"We don't just build websites. We build digital foundations that help small businesses grow, compete, and thrive — for years to come."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION QUOTE -->
+<div class="mission-strip">
+  <blockquote>
+    "Every small business deserves a website that works as hard as <em>they</em> do."
+    <cite>— The PixelCraftStudios Team</cite>
+  </blockquote>
+</div>
+
+<!-- VALUES -->
+<section class="section values-bg section-center">
+  <p class="tag-line reveal">What We Stand For</p>
+  <h2 class="section-heading reveal">Our Values</h2>
+  <p class="section-sub reveal">Everything we do is guided by these principles — they shape how we work, communicate, and deliver results for every client.</p>
+  <div class="divider reveal" style="margin:1.25rem auto 0"></div>
+  <div class="values-grid">
+    <div class="value-card reveal">
+      <span class="value-icon">🎯</span>
+      <h3>Results First</h3>
+      <p>We measure our success by yours. Every design decision, every SEO strategy, and every ad campaign is built around driving real, measurable outcomes for your business.</p>
+    </div>
+    <div class="value-card reveal">
+      <span class="value-icon">💬</span>
+      <h3>Radical Transparency</h3>
+      <p>No hidden fees, no jargon, no surprises. You always know exactly what we're doing, why we're doing it, and what results to expect — before we start.</p>
+    </div>
+    <div class="value-card reveal">
+      <span class="value-icon">⚡</span>
+      <h3>Speed Without Compromise</h3>
+      <p>We move fast because your business can't afford to wait. Our average website delivery is 2–3 days, without cutting corners on quality or craftsmanship.</p>
+    </div>
+    <div class="value-card reveal">
+      <span class="value-icon">🤝</span>
+      <h3>Partnership Mindset</h3>
+      <p>We're not just a vendor — we're a long-term partner. We invest in understanding your business deeply so every solution we build fits your specific goals.</p>
+    </div>
+    <div class="value-card reveal">
+      <span class="value-icon">♾️</span>
+      <h3>Unlimited Revisions</h3>
+      <p>You shouldn't pay more just because a design needs adjusting. We revise until you're 100% happy — no limits, no extra charges, no frustration.</p>
+    </div>
+    <div class="value-card reveal">
+      <span class="value-icon">📈</span>
+      <h3>Growth-Oriented</h3>
+      <p>We don't build for today. Every website, campaign, and strategy is designed to scale with your business as it grows — keeping you ahead of the competition.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section whyus-bg">
+  <div style="max-width:680px">
+    <p class="tag-line reveal">Why Choose Us</p>
+    <h2 class="section-heading reveal">What Makes PixelCraftStudios Different</h2>
+    <div class="divider reveal" style="margin-bottom:0"></div>
+  </div>
+  <div class="whyus-list">
+    <div class="whyus-item reveal">
+      <div class="whyus-check">✓</div>
+      <div>
+        <h4>Affordable Pricing for Real Businesses</h4>
+        <p>Websites starting at $99, SEO from $149, apps from $999. We structure our pricing so small businesses can access professional quality without breaking the bank.</p>
+      </div>
+    </div>
+    <div class="whyus-item reveal">
+      <div class="whyus-check">✓</div>
+      <div>
+        <h4>Fast Turnaround — 2 to 3 Days for Websites</h4>
+        <p>We respect your time. Most website projects are completed and live within 2–3 business days from approval. No months-long waiting periods.</p>
+      </div>
+    </div>
+    <div class="whyus-item reveal">
+      <div class="whyus-check">✓</div>
+      <div>
+        <h4>Full-Service Digital Agency</h4>
+        <p>From your first website to advanced SEO, social campaigns, and a mobile app — we handle every layer of your digital presence under one roof.</p>
+      </div>
+    </div>
+    <div class="whyus-item reveal">
+      <div class="whyus-check">✓</div>
+      <div>
+        <h4>SEO Built Into Everything We Do</h4>
+        <p>Every website we build is SEO-optimized from day one — proper structure, fast load times, schema markup, and mobile-first design that Google loves.</p>
+      </div>
+    </div>
+    <div class="whyus-item reveal">
+      <div class="whyus-check">✓</div>
+      <div>
+        <h4>Dedicated Support, Always</h4>
+        <p>You get a dedicated point of contact for every project, 30-day post-launch support, and a team that answers emails — not a ticketing system.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-wrap">
+  <div class="cta-inner">
+    <h2>Ready to Grow Your <em>Business Online?</em></h2>
+    <p>Let's talk about your goals. Free consultation, no pressure, no obligation.</p>
+    <a href="/contact" class="btn-gold">Get a Free Consultation →</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-grid">
+    <div>
+      <a href="/" class="nav-logo" aria-label="PixelCraftStudios home">
+        <div class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 20 20" fill="none"><path d="M3 10L10 3L17 10L17 17L3 17Z" stroke="#c9a84c" stroke-width="1.5" fill="none"/><circle cx="10" cy="12" r="2.5" fill="#c9a84c"/></svg>
+        </div>
+        <span class="logo-text" style="color:rgba(255,255,255,0.85)">PixelCraft<span>Studios</span></span>
+      </a>
+      <p class="foot-brand-desc">Your trusted partner for small business website design, SEO optimization, and digital growth.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li><a href="/">Small Business Website Design</a></li>
+        <li><a href="/seo-service">SEO Service</a></li>
+        <li><a href="/digital-marketing">Digital Marketing</a></li>
+        <li><a href="/mobile-app-development">Mobile App Development</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2025 PixelCraftStudios. All rights reserved.</span>
+    <span>Small Business Website Design · SEO Optimized · Fast Delivery · Unlimited Revisions</span>
+  </div>
+</footer>
+
+<script>
+const hamburger = document.getElementById('nav-hamburger');
+const mobileNav = document.getElementById('mobile-nav');
+hamburger.addEventListener('click', () => {
+  const open = hamburger.classList.toggle('open');
+  mobileNav.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', open);
+});
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); observer.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

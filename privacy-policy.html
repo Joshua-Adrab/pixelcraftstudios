@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy | PixelCraftStudios</title>
+<meta name="description" content="PixelCraftStudios Privacy Policy — how we collect, use, and protect your personal information when you use our website and services.">
+<meta name="robots" content="noindex, follow">
+<meta name="author" content="PixelCraftStudios">
+<meta name="theme-color" content="#0b1628">
+<link rel="canonical" href="https://pixelcraftstudios.online/privacy-policy">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{--navy:#0b1628;--navy-mid:#162040;--navy-soft:#1e2d52;--gold:#c9a84c;--gold-light:#e8c97a;--cream:#faf8f4;--white:#ffffff;--slate:#4a5578;--slate-light:#8492b4;--border-navy:rgba(11,22,40,0.1);--r-md:14px;--r-lg:22px;--r-xl:32px;--shadow-card:0 4px 32px rgba(11,22,40,0.08)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Outfit',sans-serif;background:var(--cream);color:var(--navy);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Playfair Display',serif}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 6%;height:72px;background:rgba(250,248,244,0.92);backdrop-filter:blur(16px) saturate(180%);border-bottom:1px solid var(--border-navy)}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:38px;height:38px;border-radius:10px;background:var(--navy);display:flex;align-items:center;justify-content:center}
+.logo-mark svg{width:20px;height:20px}
+.logo-text{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--navy);letter-spacing:-0.01em}
+.logo-text span{color:var(--gold)}
+.nav-links{display:flex;align-items:center;gap:2.5rem;list-style:none}
+.nav-links a{font-size:.875rem;font-weight:500;color:var(--slate);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--navy)}
+.nav-cta{background:var(--navy)!important;color:var(--white)!important;padding:.55rem 1.4rem;border-radius:100px;font-size:.85rem!important;font-weight:600!important;transition:background .2s,transform .15s!important}
+.nav-cta:hover{background:var(--gold)!important;color:var(--navy)!important;transform:translateY(-1px)}
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5.5px;width:42px;height:42px;background:none;border:1.5px solid var(--border-navy);border-radius:10px;cursor:pointer;padding:0}
+.nav-hamburger span{display:block;width:18px;height:2px;background:var(--navy);border-radius:2px;transition:transform .3s,opacity .2s,width .3s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0;width:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+.mobile-nav{position:fixed;top:72px;left:0;right:0;z-index:199;background:rgba(250,248,244,0.97);backdrop-filter:blur(20px) saturate(180%);border-bottom:2px solid rgba(201,168,76,.2);max-height:0;overflow:hidden;transition:max-height .38s ease;display:none}
+.mobile-nav.open{max-height:500px}
+.mobile-nav ul{list-style:none;padding:.5rem 6% 0}
+.mobile-nav li{border-bottom:1px solid var(--border-navy)}
+.mobile-nav li:last-child{border-bottom:none}
+.mobile-nav a{display:block;padding:.9rem 0;font-size:.95rem;font-weight:500;color:var(--slate);text-decoration:none;transition:color .2s}
+.mobile-nav a:hover{color:var(--navy);font-weight:600}
+.mob-cta-link{display:block;background:var(--navy);color:var(--white)!important;text-align:center;margin:1rem 6% 1.25rem;padding:.85rem;border-radius:100px;font-weight:600;font-size:.9rem;text-decoration:none;transition:background .2s,color .2s}
+.mob-cta-link:hover{background:var(--gold)!important;color:var(--navy)!important}
+
+/* HERO */
+.hero{background:var(--navy);padding:9rem 6% 4rem;position:relative;overflow:hidden}
+.hero-bg-lines{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.hero-bg-lines::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.04) 1px,transparent 1px);background-size:72px 72px}
+.hero-inner{position:relative;z-index:2;max-width:720px}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;margin-bottom:1.25rem}
+.eyebrow-dot{width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.eyebrow-text{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.hero h1{font-size:clamp(2rem,4vw,3.2rem);font-weight:800;line-height:1.1;letter-spacing:-.02em;color:var(--white);margin-bottom:1rem}
+.hero-meta{font-size:.83rem;color:rgba(255,255,255,.35)}
+
+/* POLICY BODY */
+.policy-wrap{max-width:760px;margin:0 auto;padding:4.5rem 6% 6rem}
+.policy-toc{background:var(--white);border:1px solid var(--border-navy);border-radius:var(--r-lg);padding:1.75rem 2rem;margin-bottom:3rem}
+.policy-toc h2{font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--slate);margin-bottom:1rem;font-family:'Outfit',sans-serif}
+.policy-toc ol{padding-left:1.25rem;display:flex;flex-direction:column;gap:.45rem}
+.policy-toc li a{font-size:.875rem;color:var(--slate);text-decoration:none;transition:color .2s}
+.policy-toc li a:hover{color:var(--gold)}
+.policy-section{margin-bottom:3rem}
+.policy-section h2{font-size:1.25rem;font-weight:700;color:var(--navy);margin-bottom:1rem;padding-top:.5rem;border-top:2px solid rgba(201,168,76,.2)}
+.policy-section h3{font-size:1rem;font-weight:600;color:var(--navy);margin:1.25rem 0 .6rem;font-family:'Outfit',sans-serif}
+.policy-section p{font-size:.9rem;color:var(--slate);line-height:1.85;margin-bottom:.85rem}
+.policy-section p:last-child{margin-bottom:0}
+.policy-section ul{padding-left:1.25rem;margin:.5rem 0 .85rem;display:flex;flex-direction:column;gap:.4rem}
+.policy-section ul li{font-size:.9rem;color:var(--slate);line-height:1.7}
+.policy-section ul li::marker{color:var(--gold)}
+.policy-section a{color:var(--navy);font-weight:500;text-decoration:underline;text-underline-offset:3px}
+.policy-section a:hover{color:var(--gold)}
+.policy-highlight{background:var(--white);border-left:3px solid var(--gold);border-radius:0 var(--r-md) var(--r-md) 0;padding:1rem 1.25rem;margin:1rem 0}
+.policy-highlight p{font-size:.875rem;color:var(--slate);margin:0}
+
+/* FOOTER */
+footer{background:var(--navy-mid);padding:4rem 6% 2rem;border-top:1px solid rgba(201,168,76,.1)}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:4rem;margin-bottom:3rem}
+.foot-brand-desc{font-size:.85rem;color:rgba(255,255,255,.4);margin-top:.85rem;line-height:1.8;max-width:260px}
+footer h4{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.1rem}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:.65rem}
+footer li a{font-size:.875rem;color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s}
+footer li a:hover{color:var(--gold)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:.78rem;color:rgba(255,255,255,.25)}
+.foot-bottom span:last-child{color:rgba(201,168,76,.4)}
+
+@media(max-width:900px){
+  .foot-grid{grid-template-columns:1fr;gap:2.5rem}
+  .nav-links{display:none}
+  .nav-hamburger{display:flex}
+  .mobile-nav{display:block}
+}
+@media(max-width:600px){
+  .hero{padding:8rem 5% 3rem}
+  nav{padding:0 5%}
+  .policy-wrap{padding:3rem 5% 5rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav aria-label="Main navigation">
+  <a href="/" class="nav-logo" aria-label="PixelCraftStudios home">
+    <div class="logo-mark" aria-hidden="true">
+      <svg viewBox="0 0 20 20" fill="none"><path d="M3 10L10 3L17 10L17 17L3 17Z" stroke="#c9a84c" stroke-width="1.5" fill="none"/><circle cx="10" cy="12" r="2.5" fill="#c9a84c"/></svg>
+    </div>
+    <span class="logo-text">PixelCraft<span>Studios</span></span>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="/">Web Design</a></li>
+    <li><a href="/seo-service">SEO Service</a></li>
+    <li><a href="/digital-marketing">Digital Marketing</a></li>
+    <li><a href="/mobile-app-development">Mobile Apps</a></li>
+    <li><a href="/contact" class="nav-cta">Free Consultation</a></li>
+  </ul>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mobile-nav" class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+  <ul>
+    <li><a href="/">Web Design</a></li>
+    <li><a href="/seo-service">SEO Service</a></li>
+    <li><a href="/digital-marketing">Digital Marketing</a></li>
+    <li><a href="/mobile-app-development">Mobile Apps</a></li>
+  </ul>
+  <a href="/contact" class="mob-cta-link">Free Consultation</a>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg-lines" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <div class="eyebrow-dot" aria-hidden="true"></div>
+      <span class="eyebrow-text">Legal</span>
+    </div>
+    <h1>Privacy Policy</h1>
+    <p class="hero-meta">Last updated: May 24, 2025</p>
+  </div>
+</header>
+
+<!-- POLICY CONTENT -->
+<div class="policy-wrap">
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="policy-toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#information-we-collect">Information We Collect</a></li>
+      <li><a href="#how-we-use">How We Use Your Information</a></li>
+      <li><a href="#cookies">Cookies &amp; Tracking</a></li>
+      <li><a href="#third-parties">Third-Party Services</a></li>
+      <li><a href="#data-security">Data Security</a></li>
+      <li><a href="#your-rights">Your Rights</a></li>
+      <li><a href="#children">Children's Privacy</a></li>
+      <li><a href="#changes">Changes to This Policy</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ol>
+  </div>
+
+  <div class="policy-section">
+    <div class="policy-highlight">
+      <p>This Privacy Policy explains how PixelCraftStudios ("we", "our", or "us") collects, uses, and protects your personal information when you visit our website at <strong>pixelcraftstudios.online</strong> or use our services. By using our website, you agree to the practices described here.</p>
+    </div>
+  </div>
+
+  <!-- 1 -->
+  <div class="policy-section" id="information-we-collect">
+    <h2>1. Information We Collect</h2>
+
+    <h3>Information You Provide</h3>
+    <p>When you fill out our contact form, request a consultation, or communicate with us, we may collect:</p>
+    <ul>
+      <li>Your full name</li>
+      <li>Email address</li>
+      <li>Phone number (if provided)</li>
+      <li>Business name and details</li>
+      <li>Project description and any other information you share with us</li>
+    </ul>
+
+    <h3>Information Collected Automatically</h3>
+    <p>When you visit our website, we may automatically collect certain technical information, including:</p>
+    <ul>
+      <li>IP address and general location (country/region)</li>
+      <li>Browser type and version</li>
+      <li>Pages visited and time spent on those pages</li>
+      <li>Referring website address</li>
+      <li>Device type (desktop, mobile, tablet)</li>
+    </ul>
+  </div>
+
+  <!-- 2 -->
+  <div class="policy-section" id="how-we-use">
+    <h2>2. How We Use Your Information</h2>
+    <p>We use the information we collect for the following purposes:</p>
+    <ul>
+      <li>To respond to your consultation requests and inquiries</li>
+      <li>To deliver and improve our services</li>
+      <li>To send you updates about your project or order</li>
+      <li>To send occasional emails about our services (you can opt out at any time)</li>
+      <li>To analyze website performance and improve user experience</li>
+      <li>To comply with legal obligations</li>
+    </ul>
+    <p>We do <strong>not</strong> sell, rent, or trade your personal information to third parties for their marketing purposes.</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="policy-section" id="cookies">
+    <h2>3. Cookies &amp; Tracking</h2>
+    <p>Our website may use cookies — small text files stored on your device — to improve functionality and analyze traffic. We use the following types of cookies:</p>
+    <ul>
+      <li><strong>Essential cookies:</strong> Required for the website to function correctly.</li>
+      <li><strong>Analytics cookies:</strong> Help us understand how visitors interact with our site (e.g. Google Analytics). Data is aggregated and anonymous.</li>
+      <li><strong>Preference cookies:</strong> Remember your settings and preferences.</li>
+    </ul>
+    <p>You can control or disable cookies through your browser settings. Note that disabling cookies may affect some functionality of the website.</p>
+  </div>
+
+  <!-- 4 -->
+  <div class="policy-section" id="third-parties">
+    <h2>4. Third-Party Services</h2>
+    <p>We use trusted third-party services to operate our website and deliver our services. These may include:</p>
+    <ul>
+      <li><strong>Formspree</strong> — for processing contact form submissions. Your form data is transmitted securely to Formspree's servers and forwarded to our email.</li>
+      <li><strong>Google Analytics</strong> — for website traffic analysis. Data is anonymized and subject to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+      <li><strong>Google Fonts</strong> — for typography. Font files are loaded from Google's servers.</li>
+      <li><strong>Vercel</strong> — our website hosting provider. Subject to <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">Vercel's Privacy Policy</a>.</li>
+    </ul>
+    <p>Each of these services has their own privacy policies and data handling practices. We encourage you to review them.</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="policy-section" id="data-security">
+    <h2>5. Data Security</h2>
+    <p>We take reasonable technical and organizational measures to protect your personal information from unauthorized access, loss, or misuse. Our website uses HTTPS encryption for all data transmission.</p>
+    <p>However, no method of transmission over the internet is 100% secure. While we strive to protect your information, we cannot guarantee absolute security.</p>
+    <p>We retain your personal information only for as long as necessary to fulfill the purposes described in this policy, or as required by law. Contact form submissions are retained for up to 12 months.</p>
+  </div>
+
+  <!-- 6 -->
+  <div class="policy-section" id="your-rights">
+    <h2>6. Your Rights</h2>
+    <p>Depending on your location, you may have certain rights regarding your personal information, including:</p>
+    <ul>
+      <li><strong>Right to access:</strong> Request a copy of the personal data we hold about you.</li>
+      <li><strong>Right to correction:</strong> Ask us to correct inaccurate or incomplete information.</li>
+      <li><strong>Right to deletion:</strong> Request that we delete your personal data.</li>
+      <li><strong>Right to object:</strong> Object to our processing of your data for marketing purposes.</li>
+      <li><strong>Right to portability:</strong> Receive your data in a structured, commonly used format.</li>
+    </ul>
+    <p>To exercise any of these rights, please contact us at <a href="mailto:hello@pixelcraftstudios.online">hello@pixelcraftstudios.online</a>. We will respond within 30 days.</p>
+  </div>
+
+  <!-- 7 -->
+  <div class="policy-section" id="children">
+    <h2>7. Children's Privacy</h2>
+    <p>Our website and services are not directed to children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us and we will promptly delete it.</p>
+  </div>
+
+  <!-- 8 -->
+  <div class="policy-section" id="changes">
+    <h2>8. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for legal, operational, or regulatory reasons. When we make changes, we will update the "Last updated" date at the top of this page.</p>
+    <p>We encourage you to review this page periodically. Continued use of our website after any changes constitutes your acceptance of the updated policy.</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="policy-section" id="contact">
+    <h2>9. Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or how we handle your personal data, please reach out to us:</p>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:hello@pixelcraftstudios.online">hello@pixelcraftstudios.online</a></li>
+      <li><strong>Website:</strong> <a href="/contact">pixelcraftstudios.online/contact</a></li>
+    </ul>
+    <p>We are committed to resolving any privacy concerns promptly and transparently.</p>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-grid">
+    <div>
+      <a href="/" class="nav-logo" aria-label="PixelCraftStudios home">
+        <div class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 20 20" fill="none"><path d="M3 10L10 3L17 10L17 17L3 17Z" stroke="#c9a84c" stroke-width="1.5" fill="none"/><circle cx="10" cy="12" r="2.5" fill="#c9a84c"/></svg>
+        </div>
+        <span class="logo-text" style="color:rgba(255,255,255,0.85)">PixelCraft<span>Studios</span></span>
+      </a>
+      <p class="foot-brand-desc">Your trusted partner for small business website design, SEO optimization, and digital growth.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li><a href="/">Small Business Website Design</a></li>
+        <li><a href="/seo-service">SEO Service</a></li>
+        <li><a href="/digital-marketing">Digital Marketing</a></li>
+        <li><a href="/mobile-app-development">Mobile App Development</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2025 PixelCraftStudios. All rights reserved.</span>
+    <span>Small Business Website Design · SEO Optimized · Fast Delivery · Unlimited Revisions</span>
+  </div>
+</footer>
+
+<script>
+const hamburger = document.getElementById('nav-hamburger');
+const mobileNav = document.getElementById('mobile-nav');
+hamburger.addEventListener('click', () => {
+  const open = hamburger.classList.toggle('open');
+  mobileNav.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', open);
+});
+</script>
+</body>
+</html>
