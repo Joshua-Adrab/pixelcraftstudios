@@ -22,6 +22,7 @@
 <meta name="twitter:description" content="Book a free consultation. Website design, SEO, digital marketing, mobile apps. Response within 24 hours.">
 <meta name="twitter:image" content="https://pixelcraftstudios.online/og-image.png">
 
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -107,6 +108,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,.12);background:var(--white)}
 .form-group select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234a5578' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem;cursor:pointer}
 .form-group textarea{resize:vertical;min-height:130px;line-height:1.65}
+.turnstile-wrap{display:flex;justify-content:center;margin:.75rem 0 .25rem}
 .form-submit{width:100%;padding:1rem;background:var(--navy);color:var(--white);border:none;border-radius:100px;font-family:'Outfit',sans-serif;font-size:.95rem;font-weight:600;cursor:pointer;transition:background .2s,transform .15s,box-shadow .2s;letter-spacing:.02em;margin-top:.5rem}
 .form-submit:hover{background:var(--gold);color:var(--navy);transform:translateY(-2px);box-shadow:var(--shadow-gold)}
 .form-note{font-size:.75rem;color:var(--slate-light);text-align:center;margin-top:.9rem;line-height:1.6}
@@ -301,6 +303,10 @@ footer li a:hover{color:var(--gold)}
             <textarea id="message" name="message" placeholder="What does your business do? What are your goals? Any details about what you need…" required></textarea>
           </div>
 
+          <div class="turnstile-wrap">
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAADVIMwhInS9lCVwH" data-theme="light"></div>
+          </div>
+
           <button type="submit" class="form-submit">Send My Free Consultation Request →</button>
           <p class="form-note">No spam, no commitments. We'll review your project and reply within 24 hours.</p>
         </form>
@@ -392,6 +398,15 @@ form.addEventListener('submit', async (e) => {
   });
 
   if (!valid) {
+    btn.textContent = 'Send My Free Consultation Request →';
+    btn.disabled = false;
+    return;
+  }
+
+  // Turnstile check
+  const turnstileToken = form.querySelector('[name="cf-turnstile-response"]');
+  if (!turnstileToken || !turnstileToken.value) {
+    alert('Please complete the security check before submitting.');
     btn.textContent = 'Send My Free Consultation Request →';
     btn.disabled = false;
     return;
