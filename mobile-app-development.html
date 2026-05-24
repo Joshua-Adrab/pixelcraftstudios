@@ -40,13 +40,48 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .nav-links a:hover{color:var(--navy)}
 .nav-cta{background:var(--navy)!important;color:var(--white)!important;padding:.55rem 1.4rem;border-radius:100px;font-size:.85rem!important;font-weight:600!important;transition:background .2s,transform .15s!important}
 .nav-cta:hover{background:var(--gold)!important;color:var(--navy)!important;transform:translateY(-1px)}
-.hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;padding:9rem 6% 6rem;position:relative;overflow:hidden}
+.hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;gap:5rem;padding:9rem 6% 6rem;position:relative;overflow:hidden}
 .hero-bg-circle{position:absolute;border-radius:50%;pointer-events:none}
 .hero-bg-circle.c1{width:600px;height:600px;top:-180px;right:-120px;background:radial-gradient(circle,rgba(201,168,76,.12) 0%,transparent 70%)}
 .hero-bg-circle.c2{width:400px;height:400px;bottom:-100px;left:-80px;background:radial-gradient(circle,rgba(201,168,76,.07) 0%,transparent 70%)}
 .hero-bg-lines{position:absolute;inset:0;pointer-events:none;overflow:hidden}
 .hero-bg-lines::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.04) 1px,transparent 1px);background-size:72px 72px}
-.hero-inner{position:relative;z-index:2;max-width:780px}
+.hero-inner{position:relative;z-index:2;flex:1;min-width:0}
+/* HERO VISUAL */
+.hero-visual{flex:0 0 440px;position:relative;z-index:2}
+.hm-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:90%;height:90%;background:radial-gradient(circle,rgba(201,168,76,.15) 0%,transparent 70%);pointer-events:none;z-index:0}
+.hm-notif-wrap{position:absolute;bottom:3.5rem;left:-2.25rem;z-index:10;animation:slideUp .7s ease .9s both}
+.hm-notif{background:var(--white);border-radius:14px;padding:.8rem 1rem;display:flex;align-items:center;gap:.75rem;box-shadow:0 12px 40px rgba(11,22,40,.25);min-width:200px;animation:floatBadge 4s ease-in-out 1.6s infinite}
+@keyframes floatBadge{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.hm-notif-icon{font-size:1.3rem;flex-shrink:0}
+.hm-notif-title{font-size:.82rem;font-weight:600;color:var(--navy);line-height:1.2}
+.hm-notif-sub{font-size:.7rem;color:var(--slate-light);margin-top:.1rem}
+.hm-badge-speed{position:absolute;bottom:-1.25rem;right:0;background:var(--gold);border-radius:14px;padding:.8rem 1rem;text-align:center;box-shadow:var(--shadow-gold);animation:slideUp .7s ease .7s both;z-index:10}
+.hm-badge-num{font-family:'Playfair Display',serif;font-size:1.55rem;font-weight:800;color:var(--navy);line-height:1;display:block}
+.hm-badge-lbl{font-size:.64rem;font-weight:700;color:var(--navy);opacity:.7;text-transform:uppercase;letter-spacing:.06em}
+.hm-badge-seo{position:absolute;top:-.75rem;left:-.75rem;background:var(--navy-soft);border:1px solid rgba(201,168,76,.3);border-radius:100px;padding:.45rem .9rem;display:flex;align-items:center;gap:.45rem;box-shadow:0 4px 20px rgba(0,0,0,.35);animation:slideUp .7s ease .5s both;z-index:10}
+.hm-check{color:var(--gold);font-weight:700;font-size:.85rem}
+.hm-seo-lbl{font-size:.73rem;font-weight:600;color:var(--gold-light)}
+.phone-wrap{position:relative;z-index:1;display:flex;justify-content:center;animation:slideUp .8s ease .3s both}
+.phone-frame{width:200px;background:#0d0d0d;border-radius:38px;border:6px solid #1a1a2e;box-shadow:0 32px 80px rgba(0,0,0,.6),inset 0 0 0 1px rgba(255,255,255,.08);overflow:hidden;position:relative}
+.phone-notch{width:70px;height:20px;background:#0d0d0d;border-radius:0 0 14px 14px;margin:0 auto;position:relative;z-index:2}
+.phone-screen{background:linear-gradient(160deg,#0f1f3d 0%,#1a3060 100%);min-height:340px;padding:0 0 1rem;margin-top:-2px}
+.app-header{padding:.9rem .85rem .6rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.06)}
+.app-logo{width:50px;height:9px;background:rgba(201,168,76,.6);border-radius:4px}
+.app-avatar{width:22px;height:22px;border-radius:50%;background:rgba(201,168,76,.3)}
+.app-hero-card{margin:.7rem .7rem .5rem;background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.2);border-radius:14px;padding:.9rem .85rem}
+.app-card-title{height:9px;width:65%;background:rgba(255,255,255,.7);border-radius:4px;margin-bottom:.4rem}
+.app-card-sub{height:7px;width:45%;background:rgba(255,255,255,.3);border-radius:4px;margin-bottom:.7rem}
+.app-cta-pill{width:80px;height:22px;background:var(--gold);border-radius:100px;opacity:.9}
+.app-tiles{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;padding:0 .7rem}
+.app-tile{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:.7rem .65rem}
+.app-tile-icon{width:22px;height:22px;border-radius:7px;margin-bottom:.4rem}
+.app-tile-label{height:7px;width:70%;background:rgba(255,255,255,.3);border-radius:3px;margin-bottom:.3rem}
+.app-tile-sub{height:6px;width:50%;background:rgba(255,255,255,.12);border-radius:3px}
+.app-nav{display:flex;justify-content:space-around;padding:.65rem 0;background:rgba(8,16,30,.8);border-top:1px solid rgba(255,255,255,.06);margin-top:.5rem}
+.app-nav-dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.25)}
+.app-nav-dot.active{background:var(--gold);width:18px;border-radius:3px}
+@media(max-width:768px){.hero-visual{display:none}.hero{gap:0}}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:1.75rem;opacity:0;animation:slideUp .7s ease .1s forwards}
 .eyebrow-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);animation:breathe 2s ease-in-out infinite}
 @keyframes breathe{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.4);opacity:.6}}
@@ -251,6 +286,72 @@ footer li a:hover{color:var(--gold)}
       <div class="hero-stat" role="listitem"><div class="stat-val">6–8w</div><div class="stat-label">Avg. Delivery</div></div>
       <div class="hero-stat" role="listitem"><div class="stat-val">50+</div><div class="stat-label">Apps Launched</div></div>
       <div class="hero-stat" role="listitem"><div class="stat-val">$999</div><div class="stat-label">Starting Price</div></div>
+    </div>
+  </div>
+
+  <!-- HERO VISUAL — Mobile App Mockup -->
+  <div class="hero-visual" aria-hidden="true">
+    <div class="hm-glow"></div>
+    <div class="phone-wrap">
+      <div class="phone-frame">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="app-header">
+            <div class="app-logo"></div>
+            <div class="app-avatar"></div>
+          </div>
+          <div class="app-hero-card">
+            <div class="app-card-title"></div>
+            <div class="app-card-sub"></div>
+            <div class="app-cta-pill"></div>
+          </div>
+          <div class="app-tiles">
+            <div class="app-tile">
+              <div class="app-tile-icon" style="background:rgba(201,168,76,.3)"></div>
+              <div class="app-tile-label"></div>
+              <div class="app-tile-sub"></div>
+            </div>
+            <div class="app-tile">
+              <div class="app-tile-icon" style="background:rgba(99,179,237,.2)"></div>
+              <div class="app-tile-label"></div>
+              <div class="app-tile-sub"></div>
+            </div>
+            <div class="app-tile">
+              <div class="app-tile-icon" style="background:rgba(154,230,180,.2)"></div>
+              <div class="app-tile-label"></div>
+              <div class="app-tile-sub"></div>
+            </div>
+            <div class="app-tile">
+              <div class="app-tile-icon" style="background:rgba(251,182,206,.2)"></div>
+              <div class="app-tile-label"></div>
+              <div class="app-tile-sub"></div>
+            </div>
+          </div>
+          <div class="app-nav">
+            <div class="app-nav-dot active"></div>
+            <div class="app-nav-dot"></div>
+            <div class="app-nav-dot"></div>
+            <div class="app-nav-dot"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hm-notif-wrap">
+      <div class="hm-notif">
+        <span class="hm-notif-icon">⭐</span>
+        <div>
+          <div class="hm-notif-title">4.9 App Store Rating</div>
+          <div class="hm-notif-sub">500+ reviews · iOS &amp; Android</div>
+        </div>
+      </div>
+    </div>
+    <div class="hm-badge-speed">
+      <span class="hm-badge-num">50+</span>
+      <span class="hm-badge-lbl">Apps Live</span>
+    </div>
+    <div class="hm-badge-seo">
+      <span class="hm-check">✓</span>
+      <span class="hm-seo-lbl">iOS &amp; Android</span>
     </div>
   </div>
 </header>

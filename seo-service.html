@@ -41,13 +41,53 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .nav-links a:hover,.nav-links a.active{color:var(--navy)}
 .nav-cta{background:var(--navy)!important;color:var(--white)!important;padding:.55rem 1.4rem;border-radius:100px;font-size:.85rem!important;font-weight:600!important;transition:background .2s,transform .15s!important}
 .nav-cta:hover{background:var(--gold)!important;color:var(--navy)!important;transform:translateY(-1px)}
-.hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;padding:9rem 6% 6rem;position:relative;overflow:hidden}
+.hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;gap:5rem;padding:9rem 6% 6rem;position:relative;overflow:hidden}
 .hero-bg-circle{position:absolute;border-radius:50%;pointer-events:none}
 .hero-bg-circle.c1{width:600px;height:600px;top:-180px;right:-120px;background:radial-gradient(circle,rgba(201,168,76,.12) 0%,transparent 70%)}
 .hero-bg-circle.c2{width:400px;height:400px;bottom:-100px;left:-80px;background:radial-gradient(circle,rgba(201,168,76,.07) 0%,transparent 70%)}
 .hero-bg-lines{position:absolute;inset:0;pointer-events:none;overflow:hidden}
 .hero-bg-lines::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.04) 1px,transparent 1px);background-size:72px 72px}
-.hero-inner{position:relative;z-index:2;max-width:780px}
+.hero-inner{position:relative;z-index:2;flex:1;min-width:0}
+/* HERO VISUAL */
+.hero-visual{flex:0 0 440px;position:relative;z-index:2}
+.hm-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:90%;height:90%;background:radial-gradient(circle,rgba(201,168,76,.15) 0%,transparent 70%);pointer-events:none;z-index:0}
+.hm-browser{position:relative;z-index:1;background:#111827;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.08);box-shadow:0 32px 80px rgba(0,0,0,.45);animation:slideUp .8s ease .3s both}
+.hm-bar{background:#1f2937;padding:.75rem 1rem;display:flex;align-items:center;gap:6px}
+.hm-dot{width:9px;height:9px;border-radius:50%}
+.hm-url{flex:1;margin-left:6px;background:rgba(255,255,255,.06);border-radius:6px;padding:.28rem .75rem;font-size:.7rem;color:rgba(255,255,255,.3);font-family:monospace}
+.hm-notif-wrap{position:absolute;bottom:3.5rem;left:-2.25rem;z-index:10;animation:slideUp .7s ease .9s both}
+.hm-notif{background:var(--white);border-radius:14px;padding:.8rem 1rem;display:flex;align-items:center;gap:.75rem;box-shadow:0 12px 40px rgba(11,22,40,.25);min-width:200px;animation:floatBadge 4s ease-in-out 1.6s infinite}
+@keyframes floatBadge{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.hm-notif-icon{font-size:1.3rem;flex-shrink:0}
+.hm-notif-title{font-size:.82rem;font-weight:600;color:var(--navy);line-height:1.2}
+.hm-notif-sub{font-size:.7rem;color:var(--slate-light);margin-top:.1rem}
+.hm-badge-speed{position:absolute;bottom:-1.25rem;right:-1.25rem;background:var(--gold);border-radius:14px;padding:.8rem 1rem;text-align:center;box-shadow:var(--shadow-gold);animation:slideUp .7s ease .7s both;z-index:10}
+.hm-badge-num{font-family:'Playfair Display',serif;font-size:1.55rem;font-weight:800;color:var(--navy);line-height:1;display:block}
+.hm-badge-lbl{font-size:.64rem;font-weight:700;color:var(--navy);opacity:.7;text-transform:uppercase;letter-spacing:.06em}
+.hm-badge-seo{position:absolute;top:-.75rem;left:-.75rem;background:var(--navy-soft);border:1px solid rgba(201,168,76,.3);border-radius:100px;padding:.45rem .9rem;display:flex;align-items:center;gap:.45rem;box-shadow:0 4px 20px rgba(0,0,0,.35);animation:slideUp .7s ease .5s both;z-index:10}
+.hm-check{color:var(--gold);font-weight:700;font-size:.85rem}
+.hm-seo-lbl{font-size:.73rem;font-weight:600;color:var(--gold-light)}
+.seo-dash-header{padding:1rem;background:rgba(11,22,40,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+.seo-dash-title{height:10px;width:55%;background:rgba(255,255,255,.6);border-radius:4px;margin-bottom:.4rem}
+.seo-dash-sub{height:7px;width:35%;background:rgba(201,168,76,.4);border-radius:4px}
+.seo-rows{background:rgba(8,16,30,.95);padding:.3rem 0}
+.seo-row{display:flex;align-items:center;padding:.55rem 1rem;border-bottom:1px solid rgba(255,255,255,.04);gap:.6rem}
+.seo-row:last-child{border-bottom:none}
+.seo-kw{flex:1;height:8px;background:rgba(255,255,255,.18);border-radius:4px}
+.seo-kw.sm{max-width:65%}
+.seo-pos{font-size:.68rem;font-weight:700;padding:.18rem .45rem;border-radius:5px;white-space:nowrap}
+.seo-pos.p1{background:rgba(201,168,76,.3);color:var(--gold-light)}
+.seo-pos.p2{background:rgba(201,168,76,.15);color:rgba(201,168,76,.75)}
+.seo-pos.p3{background:rgba(201,168,76,.08);color:rgba(201,168,76,.5)}
+.seo-up{font-size:.62rem;color:#4ade80;font-weight:700;white-space:nowrap}
+.seo-chart{padding:.75rem 1rem 1rem;background:rgba(8,16,30,.9)}
+.seo-chart-label{font-size:.62rem;color:rgba(255,255,255,.3);margin-bottom:.5rem;font-family:monospace}
+.seo-bars{display:flex;align-items:flex-end;gap:5px;height:46px}
+.seo-bar{flex:1;border-radius:3px 3px 0 0;background:rgba(201,168,76,.2)}
+.seo-bar:nth-child(5){background:rgba(201,168,76,.4)}
+.seo-bar:nth-child(6){background:rgba(201,168,76,.55)}
+.seo-bar:last-child{background:rgba(201,168,76,.8)}
+@media(max-width:768px){.hero-visual{display:none}.hero{gap:0}}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:1.75rem;opacity:0;animation:slideUp .7s ease .1s forwards}
 .eyebrow-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);animation:breathe 2s ease-in-out infinite}
 @keyframes breathe{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.4);opacity:.6}}
@@ -248,6 +288,74 @@ footer li a:hover{color:var(--gold)}
       <div class="hero-stat" role="listitem"><div class="stat-val">90d</div><div class="stat-label">First Results</div></div>
       <div class="hero-stat" role="listitem"><div class="stat-val">100%</div><div class="stat-label">Transparent Reports</div></div>
       <div class="hero-stat" role="listitem"><div class="stat-val">$149</div><div class="stat-label">Starting Price</div></div>
+    </div>
+  </div>
+
+  <!-- HERO VISUAL — SEO Rankings Dashboard -->
+  <div class="hero-visual" aria-hidden="true">
+    <div class="hm-glow"></div>
+    <div class="hm-browser">
+      <div class="hm-bar">
+        <div class="hm-dot" style="background:#ff5f57"></div>
+        <div class="hm-dot" style="background:#febc2e"></div>
+        <div class="hm-dot" style="background:#28c840"></div>
+        <div class="hm-url">search-console · keyword rankings</div>
+      </div>
+      <div class="seo-dash-header">
+        <div class="seo-dash-title"></div>
+        <div class="seo-dash-sub"></div>
+      </div>
+      <div class="seo-rows">
+        <div class="seo-row">
+          <div class="seo-kw"></div>
+          <div class="seo-pos p1">#1</div>
+          <div class="seo-up">▲ 14</div>
+        </div>
+        <div class="seo-row">
+          <div class="seo-kw sm"></div>
+          <div class="seo-pos p2">#2</div>
+          <div class="seo-up">▲ 9</div>
+        </div>
+        <div class="seo-row">
+          <div class="seo-kw"></div>
+          <div class="seo-pos p3">#4</div>
+          <div class="seo-up">▲ 6</div>
+        </div>
+        <div class="seo-row">
+          <div class="seo-kw sm"></div>
+          <div class="seo-pos p3">#5</div>
+          <div class="seo-up">▲ 3</div>
+        </div>
+      </div>
+      <div class="seo-chart">
+        <div class="seo-chart-label">Organic traffic — last 7 weeks</div>
+        <div class="seo-bars">
+          <div class="seo-bar" style="height:30%"></div>
+          <div class="seo-bar" style="height:42%"></div>
+          <div class="seo-bar" style="height:38%"></div>
+          <div class="seo-bar" style="height:58%"></div>
+          <div class="seo-bar" style="height:72%"></div>
+          <div class="seo-bar" style="height:86%"></div>
+          <div class="seo-bar" style="height:100%"></div>
+        </div>
+      </div>
+    </div>
+    <div class="hm-notif-wrap">
+      <div class="hm-notif">
+        <span class="hm-notif-icon">📈</span>
+        <div>
+          <div class="hm-notif-title">Traffic up 3× this month</div>
+          <div class="hm-notif-sub">Organic · Google Search</div>
+        </div>
+      </div>
+    </div>
+    <div class="hm-badge-speed">
+      <span class="hm-badge-num">#1</span>
+      <span class="hm-badge-lbl">Google Rank</span>
+    </div>
+    <div class="hm-badge-seo">
+      <span class="hm-check">✓</span>
+      <span class="hm-seo-lbl">Page 1 Ranked</span>
     </div>
   </div>
 </header>
