@@ -730,16 +730,59 @@ footer li a:hover{color:var(--gold)}
       "@id": "https://pixelcraftstudios.online/#organization",
       "name": "PixelCraftStudios",
       "url": "https://pixelcraftstudios.online/",
+      "logo": "https://pixelcraftstudios.online/favicon.svg",
       "description": "Professional SEO service for small businesses. Keyword research, on-page optimization, local SEO, and monthly reporting. Plans from $149/month.",
       "priceRange": "$149–$299+/month",
       "serviceType": "SEO Service for Small Business",
       "areaServed": "Worldwide",
+      "knowsAbout": ["Search Engine Optimization", "Local SEO", "Keyword Research", "On-Page SEO", "Technical SEO", "Link Building", "Google Rankings", "Small Business SEO"],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "url": "https://pixelcraftstudios.online/contact"
+      },
+      "sameAs": ["https://twitter.com/PixelCraftStudios"],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "3",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://pixelcraftstudios.online/seo-service#service",
+      "name": "SEO Service for Small Businesses",
+      "serviceType": "Search Engine Optimization",
+      "provider": {"@id": "https://pixelcraftstudios.online/#organization"},
+      "description": "Professional SEO service for small businesses: keyword research, on-page optimization, local SEO, technical SEO, and monthly ranking reports. Plans start at $149/month with no long-term contracts.",
+      "url": "https://pixelcraftstudios.online/seo-service",
+      "areaServed": "Worldwide",
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Small Business Owners"
+      },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Small Business SEO Plans",
         "itemListElement": [
-          {"@type": "Offer", "name": "Local SEO Plan", "price": "149", "priceCurrency": "USD"},
-          {"@type": "Offer", "name": "Growth SEO Plan", "price": "299", "priceCurrency": "USD"}
+          {
+            "@type": "Offer",
+            "name": "Local SEO Plan",
+            "price": "149",
+            "priceCurrency": "USD",
+            "description": "Keyword research, Google Business Profile optimization, local citations, on-page SEO, monthly ranking report",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "name": "Growth SEO Plan",
+            "price": "299",
+            "priceCurrency": "USD",
+            "description": "Everything in Local SEO plus technical SEO audit, link building, content optimization, competitor analysis, detailed monthly report",
+            "availability": "https://schema.org/InStock"
+          }
         ]
       }
     },
@@ -750,6 +793,11 @@ footer li a:hover{color:var(--gold)}
       "name": "SEO Service for Small Business | Rank on Google | PixelCraftStudios",
       "description": "Professional SEO service for small businesses. Rank higher on Google, drive organic traffic, and grow your business. Plans from $149/month.",
       "isPartOf": {"@id": "https://pixelcraftstudios.online/#organization"},
+      "about": {"@id": "https://pixelcraftstudios.online/seo-service#service"},
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "h2"]
+      },
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [

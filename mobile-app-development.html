@@ -720,16 +720,59 @@ footer li a:hover{color:var(--gold)}
       "@id": "https://pixelcraftstudios.online/#organization",
       "name": "PixelCraftStudios",
       "url": "https://pixelcraftstudios.online/",
+      "logo": "https://pixelcraftstudios.online/favicon.svg",
       "description": "Custom iOS and Android mobile app development for small businesses. Booking apps, client portals, loyalty programs. Packages from $999.",
       "priceRange": "$999–$2,499+",
       "serviceType": "Mobile App Development for Small Business",
       "areaServed": "Worldwide",
+      "knowsAbout": ["Mobile App Development", "iOS App Development", "Android App Development", "Cross-Platform Apps", "Booking App", "Loyalty App", "Small Business Apps", "React Native"],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "url": "https://pixelcraftstudios.online/contact"
+      },
+      "sameAs": ["https://twitter.com/PixelCraftStudios"],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "3",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://pixelcraftstudios.online/mobile-app-development#service",
+      "name": "Mobile App Development for Small Businesses",
+      "serviceType": "Mobile App Development",
+      "provider": {"@id": "https://pixelcraftstudios.online/#organization"},
+      "description": "Custom iOS and Android mobile app development for small businesses. Booking apps, client portals, loyalty programs, and more. Packages start at $999 with both iOS and Android included.",
+      "url": "https://pixelcraftstudios.online/mobile-app-development",
+      "areaServed": "Worldwide",
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Small Business Owners"
+      },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Small Business App Packages",
         "itemListElement": [
-          {"@type": "Offer", "name": "Starter App", "price": "999", "priceCurrency": "USD"},
-          {"@type": "Offer", "name": "Business App", "price": "2499", "priceCurrency": "USD"}
+          {
+            "@type": "Offer",
+            "name": "Starter App",
+            "price": "999",
+            "priceCurrency": "USD",
+            "description": "Up to 5 screens, iOS and Android, custom design, App Store & Google Play submission",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "name": "Business App",
+            "price": "2499",
+            "priceCurrency": "USD",
+            "description": "User accounts, booking or payment integration, admin dashboard, push notifications, iOS and Android",
+            "availability": "https://schema.org/InStock"
+          }
         ]
       }
     },
@@ -740,6 +783,11 @@ footer li a:hover{color:var(--gold)}
       "name": "Mobile App Development for Small Business | iOS & Android | PixelCraftStudios",
       "description": "Custom iOS and Android mobile app development for small businesses. Booking apps, client portals, loyalty programs. Packages from $999.",
       "isPartOf": {"@id": "https://pixelcraftstudios.online/#organization"},
+      "about": {"@id": "https://pixelcraftstudios.online/mobile-app-development#service"},
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "h2"]
+      },
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [

@@ -715,10 +715,61 @@ footer li a:hover{color:var(--gold)}
       "@id": "https://pixelcraftstudios.online/#organization",
       "name": "PixelCraftStudios",
       "url": "https://pixelcraftstudios.online/",
+      "logo": "https://pixelcraftstudios.online/favicon.svg",
       "description": "Digital marketing services for small businesses — social media management, paid ads, email marketing, and content strategy. Plans from $199/month.",
       "priceRange": "$199–$449+/month",
       "serviceType": "Digital Marketing for Small Business",
-      "areaServed": "Worldwide"
+      "areaServed": "Worldwide",
+      "knowsAbout": ["Digital Marketing", "Social Media Marketing", "Paid Advertising", "Email Marketing", "Content Strategy", "Small Business Growth", "Facebook Ads", "Google Ads"],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "url": "https://pixelcraftstudios.online/contact"
+      },
+      "sameAs": ["https://twitter.com/PixelCraftStudios"],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "3",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://pixelcraftstudios.online/digital-marketing#service",
+      "name": "Digital Marketing for Small Businesses",
+      "serviceType": "Digital Marketing",
+      "provider": {"@id": "https://pixelcraftstudios.online/#organization"},
+      "description": "Full-service digital marketing for small businesses: social media management, paid advertising (Google & Meta Ads), email marketing automation, and content strategy. Plans start at $199/month with no long-term contracts.",
+      "url": "https://pixelcraftstudios.online/digital-marketing",
+      "areaServed": "Worldwide",
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Small Business Owners"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Digital Marketing Plans",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Starter Digital Marketing Plan",
+            "price": "199",
+            "priceCurrency": "USD",
+            "description": "Social media management on 2 platforms, 12 posts/month, monthly email newsletter, basic performance report, brand voice & content strategy",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "name": "Growth Digital Marketing Plan",
+            "price": "449",
+            "priceCurrency": "USD",
+            "description": "Everything in Starter plus paid ads management (Google or Facebook), ad creative & copywriting, email automation sequences, retargeting campaigns, 2 blog posts/month, detailed monthly ROI report",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      }
     },
     {
       "@type": "WebPage",
@@ -727,6 +778,11 @@ footer li a:hover{color:var(--gold)}
       "name": "Digital Marketing Service for Small Business | PixelCraftStudios",
       "description": "Grow your small business online with expert digital marketing. Social media, paid ads, email campaigns, and content strategy. Plans from $199/month.",
       "isPartOf": {"@id": "https://pixelcraftstudios.online/#organization"},
+      "about": {"@id": "https://pixelcraftstudios.online/digital-marketing#service"},
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "h2"]
+      },
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [

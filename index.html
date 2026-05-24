@@ -1069,6 +1069,12 @@ footer li a:hover{color:var(--gold)}
       "priceRange": "$99–$249+",
       "serviceType": "Small Business Website Design",
       "knowsAbout": ["Small Business Website Design", "SEO Optimization", "Web Development", "Responsive Web Design", "Lead Generation Websites"],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "url": "https://pixelcraftstudios.online/contact"
+      },
+      "sameAs": ["https://twitter.com/PixelCraftStudios"],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Small Business Website Packages",
@@ -1106,10 +1112,51 @@ footer li a:hover{color:var(--gold)}
       "name": "Small Business Website Design & Development | PixelCraftStudios",
       "description": "Affordable professional website design for small businesses. Custom-built, SEO optimized, mobile-friendly. Starting at $99. Unlimited revisions. Fast delivery.",
       "isPartOf": {"@id": "https://pixelcraftstudios.online/#organization"},
+      "about": {"@id": "https://pixelcraftstudios.online/#service"},
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "h2"]
+      },
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
           {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pixelcraftstudios.online/"}
+        ]
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://pixelcraftstudios.online/#service",
+      "name": "Small Business Website Design",
+      "serviceType": "Website Design and Development",
+      "provider": {"@id": "https://pixelcraftstudios.online/#organization"},
+      "description": "Custom website design and development for small businesses: SEO optimized, mobile-friendly, fast delivery, unlimited revisions. Starter package from $99.",
+      "url": "https://pixelcraftstudios.online/",
+      "areaServed": "Worldwide",
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Small Business Owners"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Small Business Website Packages",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Starter Small Business Website",
+            "price": "99",
+            "priceCurrency": "USD",
+            "description": "Custom website up to 3 pages, SEO optimized, mobile-friendly, unlimited revisions, 2–3 day delivery",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "name": "Premium Small Business Website",
+            "price": "249",
+            "priceCurrency": "USD",
+            "description": "Full custom website, advanced SEO, blog, lead generation, Google Maps, 30-day support, unlimited revisions",
+            "availability": "https://schema.org/InStock"
+          }
         ]
       }
     },
