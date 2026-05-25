@@ -33,45 +33,6 @@
 <meta name="twitter:image" content="https://pixelcraftstudios.online/og-image.png">
 
 <!-- ═══ SCHEMA / STRUCTURED DATA (AI SEARCH) ═══ -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["ProfessionalService", "LocalBusiness"],
-  "name": "PixelCraftStudios",
-  "url": "https://pixelcraftstudios.online",
-  "description": "Custom website design for small businesses. SEO-ready, mobile-first websites with unlimited revisions starting at $99.",
-  "image": "https://pixelcraftstudios.online/og-image.png",
-  "priceRange": "$$",
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Website Design Packages",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "name": "Starter Website Design",
-        "price": "99",
-        "priceCurrency": "USD",
-        "description": "Custom-built, SEO-optimized, mobile-friendly website with unlimited revisions."
-      }
-    ]
-  },
-  "areaServed": {
-    "@type": "Country",
-    "name": "US"
-  },
-  "serviceType": "Website Design",
-  "knowsAbout": [
-    "Custom Website Design",
-    "Small Business Websites",
-    "SEO Optimization",
-    "Mobile-Friendly Design"
-  ],
-  "sameAs": [
-    "https://twitter.com/PixelCraftStudios"
-  ]
-}
-</script>
-
 <!-- ═══ FONTS ═══ -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1112,7 +1073,7 @@ footer li a:hover{color:var(--gold)}
       }
     },
     {
-      "@type": "WebPage",
+      "@type": ["WebPage", "FAQPage"],
       "@id": "https://pixelcraftstudios.online/",
       "url": "https://pixelcraftstudios.online/",
       "name": "Small Business Website Design & Development | PixelCraftStudios",
@@ -1128,46 +1089,7 @@ footer li a:hover{color:var(--gold)}
         "itemListElement": [
           {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pixelcraftstudios.online/"}
         ]
-      }
-    },
-    {
-      "@type": "Service",
-      "@id": "https://pixelcraftstudios.online/#service",
-      "name": "Small Business Website Design",
-      "serviceType": "Website Design and Development",
-      "provider": {"@id": "https://pixelcraftstudios.online/#organization"},
-      "description": "Custom website design and development for small businesses: SEO optimized, mobile-friendly, fast delivery, unlimited revisions. Starter package from $99.",
-      "url": "https://pixelcraftstudios.online/",
-      "areaServed": "Worldwide",
-      "audience": {
-        "@type": "BusinessAudience",
-        "audienceType": "Small Business Owners"
       },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Small Business Website Packages",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "name": "Starter Small Business Website",
-            "price": "99",
-            "priceCurrency": "USD",
-            "description": "Custom website up to 3 pages, SEO optimized, mobile-friendly, unlimited revisions, 2–3 day delivery",
-            "availability": "https://schema.org/InStock"
-          },
-          {
-            "@type": "Offer",
-            "name": "Premium Small Business Website",
-            "price": "249",
-            "priceCurrency": "USD",
-            "description": "Full custom website, advanced SEO, blog, lead generation, Google Maps, 30-day support, unlimited revisions",
-            "availability": "https://schema.org/InStock"
-          }
-        ]
-      }
-    },
-    {
-      "@type": "FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
@@ -1226,6 +1148,42 @@ footer li a:hover{color:var(--gold)}
           }
         }
       ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://pixelcraftstudios.online/#service",
+      "name": "Small Business Website Design",
+      "serviceType": "Website Design and Development",
+      "provider": {"@id": "https://pixelcraftstudios.online/#organization"},
+      "description": "Custom website design and development for small businesses: SEO optimized, mobile-friendly, fast delivery, unlimited revisions. Starter package from $99.",
+      "url": "https://pixelcraftstudios.online/",
+      "areaServed": "Worldwide",
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Small Business Owners"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Small Business Website Packages",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Starter Small Business Website",
+            "price": "99",
+            "priceCurrency": "USD",
+            "description": "Custom website up to 3 pages, SEO optimized, mobile-friendly, unlimited revisions, 2–3 day delivery",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "name": "Premium Small Business Website",
+            "price": "249",
+            "priceCurrency": "USD",
+            "description": "Full custom website, advanced SEO, blog, lead generation, Google Maps, 30-day support, unlimited revisions",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      }
     }
   ]
 }
