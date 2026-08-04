@@ -22,7 +22,6 @@
 <meta name="twitter:description" content="Book a free consultation. Website design, SEO, digital marketing, mobile apps. Response within 24 hours.">
 <meta name="twitter:image" content="https://pixelcraftstudios.online/og-image.png">
 
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -113,7 +112,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,.12);background:var(--white)}
 .form-group select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234a5578' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem;cursor:pointer}
 .form-group textarea{resize:vertical;min-height:130px;line-height:1.65}
-.turnstile-wrap{display:flex;justify-content:center;margin:.75rem 0 .25rem}
+.h-captcha-wrap{display:flex;justify-content:center;margin:.75rem 0 .25rem;min-height:78px}
 .form-submit{width:100%;padding:1rem;background:var(--navy);color:var(--white);border:none;border-radius:100px;font-family:'Outfit',sans-serif;font-size:.95rem;font-weight:600;cursor:pointer;transition:background .2s,transform .15s,box-shadow .2s;letter-spacing:.02em;margin-top:.5rem}
 .form-submit:hover{background:var(--gold);color:var(--navy);transform:translateY(-2px);box-shadow:var(--shadow-gold)}
 .form-submit:disabled{cursor:not-allowed;opacity:.65;transform:none;box-shadow:none}
@@ -312,8 +311,8 @@ footer li a:hover{color:var(--gold)}
             <textarea id="message" name="message" placeholder="What does your business do? What are your goals? Any details about what you need…" required></textarea>
           </div>
 
-          <div class="turnstile-wrap">
-            <div class="cf-turnstile" data-sitekey="0x4AAAAAADVIMwhInS9lCVwH" data-theme="light"></div>
+          <div class="h-captcha-wrap">
+            <div class="h-captcha" data-captcha="true"></div>
           </div>
 
           <button type="submit" class="form-submit">Send My Free Consultation Request →</button>
@@ -369,6 +368,7 @@ footer li a:hover{color:var(--gold)}
   </div>
 </footer>
 
+<script src="https://web3forms.com/client/script.js" async defer></script>
 <script>
 // Mobile nav toggle
 const hamburger = document.getElementById('nav-hamburger');
@@ -421,27 +421,32 @@ form.addEventListener('submit', async (e) => {
 
   const accessKey = form.elements.access_key.value;
   if (!accessKey || accessKey === 'YOUR_WEB3FORMS_ACCESS_KEY') {
-    status.textContent = 'The contact form is not configured yet. Please email us directly at hello@pixelcraftstudios.online.';
+    status.textContent = 'The contact form is not configured yet. Please try again later.';
     status.style.display = 'block';
     btn.textContent = submitLabel;
     btn.disabled = false;
     return;
   }
 
-  // Turnstile check
-  const turnstileToken = form.querySelector('[name="cf-turnstile-response"]');
-  if (!turnstileToken || !turnstileToken.value) {
-    alert('Please complete the security check before submitting.');
+  const captchaResponse = form.querySelector('textarea[name="h-captcha-response"]');
+  if (!captchaResponse || !captchaResponse.value) {
+    status.textContent = 'Please complete the captcha before submitting.';
+    status.style.display = 'block';
     btn.textContent = submitLabel;
     btn.disabled = false;
     return;
   }
 
   try {
+    const formData = new FormData(form);
+    const payload = Object.fromEntries(formData.entries());
     const res = await fetch(form.action, {
       method: 'POST',
-      body: new FormData(form),
-      headers: { Accept: 'application/json' }
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json'
+      },
+      body: JSON.stringify(payload)
     });
     const data = await res.json();
 
@@ -455,7 +460,8 @@ form.addEventListener('submit', async (e) => {
   } catch (error) {
     btn.textContent = submitLabel;
     btn.disabled = false;
-    status.textContent = 'Something went wrong. Please try again or email us directly at hello@pixelcraftstudios.online.';
+    if (window.hcaptcha) window.hcaptcha.reset();
+    status.textContent = 'Something went wrong. Please try again.';
     status.style.display = 'block';
   }
 });
