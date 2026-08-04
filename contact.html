@@ -116,7 +116,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .turnstile-wrap{display:flex;justify-content:center;margin:.75rem 0 .25rem}
 .form-submit{width:100%;padding:1rem;background:var(--navy);color:var(--white);border:none;border-radius:100px;font-family:'Outfit',sans-serif;font-size:.95rem;font-weight:600;cursor:pointer;transition:background .2s,transform .15s,box-shadow .2s;letter-spacing:.02em;margin-top:.5rem}
 .form-submit:hover{background:var(--gold);color:var(--navy);transform:translateY(-2px);box-shadow:var(--shadow-gold)}
+.form-submit:disabled{cursor:not-allowed;opacity:.65;transform:none;box-shadow:none}
 .form-note{font-size:.75rem;color:var(--slate-light);text-align:center;margin-top:.9rem;line-height:1.6}
+.form-status{display:none;font-size:.82rem;line-height:1.5;text-align:center;margin-top:.9rem;color:#b42318}
 
 /* SUCCESS STATE */
 .form-success{display:none;text-align:center;padding:3rem 2rem}
@@ -255,10 +257,12 @@ footer li a:hover{color:var(--gold)}
         <h2>Send Us a Message</h2>
         <p class="form-subtitle">Fill in the details below and we'll get back to you with a free, tailored plan.</p>
 
-        <!-- Replace YOUR_FORM_ID with your Formspree form ID from formspree.io -->
-        <form id="contact-form" action="https://formspree.io/f/xaqkbadd" method="POST" novalidate>
-          <input type="hidden" name="_subject" value="New consultation request — PixelCraftStudios">
-          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <!-- Replace the value below with the access key from your Web3Forms dashboard. -->
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+          <input type="hidden" name="access_key" value="10fc6396-587c-46e4-a8dc-6d24fa6b50cc">
+          <input type="hidden" name="subject" value="New consultation request — PixelCraftStudios">
+          <input type="hidden" name="from_name" value="PixelCraftStudios Website">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
 
           <div class="form-row">
             <div class="form-group">
@@ -314,6 +318,7 @@ footer li a:hover{color:var(--gold)}
 
           <button type="submit" class="form-submit">Send My Free Consultation Request →</button>
           <p class="form-note">No spam, no commitments. We'll review your project and reply within 24 hours.</p>
+          <p class="form-status" id="form-status" role="alert" aria-live="polite"></p>
         </form>
 
         <div class="form-success" id="form-success">
@@ -383,11 +388,15 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 // Form submission
 const form = document.getElementById('contact-form');
 const success = document.getElementById('form-success');
+const status = document.getElementById('form-status');
+const submitLabel = 'Send My Free Consultation Request →';
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   const btn = form.querySelector('.form-submit');
+  status.style.display = 'none';
+  status.textContent = '';
   btn.textContent = 'Sending…';
   btn.disabled = true;
 
@@ -403,7 +412,18 @@ form.addEventListener('submit', async (e) => {
   });
 
   if (!valid) {
-    btn.textContent = 'Send My Free Consultation Request →';
+    status.textContent = 'Please complete all required fields.';
+    status.style.display = 'block';
+    btn.textContent = submitLabel;
+    btn.disabled = false;
+    return;
+  }
+
+  const accessKey = form.elements.access_key.value;
+  if (!accessKey || accessKey === 'YOUR_WEB3FORMS_ACCESS_KEY') {
+    status.textContent = 'The contact form is not configured yet. Please email us directly at hello@pixelcraftstudios.online.';
+    status.style.display = 'block';
+    btn.textContent = submitLabel;
     btn.disabled = false;
     return;
   }
@@ -412,7 +432,7 @@ form.addEventListener('submit', async (e) => {
   const turnstileToken = form.querySelector('[name="cf-turnstile-response"]');
   if (!turnstileToken || !turnstileToken.value) {
     alert('Please complete the security check before submitting.');
-    btn.textContent = 'Send My Free Consultation Request →';
+    btn.textContent = submitLabel;
     btn.disabled = false;
     return;
   }
@@ -423,17 +443,20 @@ form.addEventListener('submit', async (e) => {
       body: new FormData(form),
       headers: { Accept: 'application/json' }
     });
+    const data = await res.json();
 
-    if (res.ok) {
+    if (res.ok && data.success) {
+      form.reset();
       form.style.display = 'none';
       success.style.display = 'block';
     } else {
-      throw new Error('Server error');
+      throw new Error(data.message || 'Server error');
     }
-  } catch {
-    btn.textContent = 'Send My Free Consultation Request →';
+  } catch (error) {
+    btn.textContent = submitLabel;
     btn.disabled = false;
-    alert('Something went wrong. Please email us directly at hello@pixelcraftstudios.online');
+    status.textContent = 'Something went wrong. Please try again or email us directly at hello@pixelcraftstudios.online.';
+    status.style.display = 'block';
   }
 });
 </script>
